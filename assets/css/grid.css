@@ -1,0 +1,338 @@
+
+/* ROWS */
+
+.row {
+  padding: 0px;
+  margin: 0px;
+}
+
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+
+/* COLUMNS */
+
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; }
+
+
+/* 12 GRID LAYOUT - SMALL SCREEN */
+
+.col-xs-12 {
+  width: 100%;
+}
+
+.col-xs-11 {
+    width: 91.53%;
+}
+.col-xs-10 {
+    width: 83.06%;
+}
+
+.col-xs-9 {
+    width: 74.6%;
+}
+
+.col-xs-8 {
+    width: 66.13%;
+}
+
+.col-xs-7 {
+    width: 57.66%;
+}
+
+.col-xs-6 {
+    width: 49.2%;
+}
+
+.col-xs-5 {
+    width: 40.73%;
+}
+
+.col-xs-4 {
+    width: 32.26%;
+}
+
+.col-xs-3 {
+    width: 23.8%;
+}
+
+.col-xs-2 {
+    width: 15.33%;
+}
+
+.col-xs-1 {
+    width: 6.866%;
+}
+
+
+/* GRID OFFSETS - SMALL SCREEN */
+
+/*descendent selector used to overide column class first child pseudo-class - line 28*/
+.row > .col-xs-offset-11 {
+  margin-left: 93.13%; /*91.53% + 1.6% - sum of column widths & gutter */
+}
+
+.row > .col-xs-offset-10 {
+  margin-left: 84.66%; /*3.06% + 1.6%*/
+}
+
+.row > .col-xs-offset-9 {
+  margin-left: 76.2%; /*74.6% + 1.6%*/
+}
+
+.row > .col-xs-offset-8 {
+  margin-left: 67.73%; /*66.13% + 1.6%*/
+}
+
+.row > .col-xs-offset-7 {
+  margin-left: 59.26%; /*57.66% + 1.6%*/
+}
+
+.row > .col-xs-offset-6 {
+  margin-left: 50.8%; /*49.2% + 1.6%*/
+}
+
+.row > .col-xs-offset-5 {
+  margin-left: 42.33%; /*40.73% + 1.6%*/
+}
+
+.row > .col-xs-offset-4 {
+  margin-left: 33.86%; /*32.26% + 1.6%*/
+}
+
+.row > .col-xs-offset-3 {
+  margin-left: 25.4%; /*23.8% + 1.6%*/
+}
+
+.row > .col-xs-offset-2 {
+  margin-left: 16.93%; /*15.33% + 1.6%*/
+}
+
+.row > .col-xs-offset-1 {
+  margin-left: 8.486%; /*6.886% + 1.6%*/
+}
+
+.row > .col-xs-offset-0 {
+  margin-left: 1.6%; /*1.6% - same as column gutter width*/
+}
+
+
+/* 12 GRID LAYOUT - MEDIUM SCREEN */
+
+@media (min-width: 768px) {
+  .col-sm-12 {
+    width: 100%;
+  }
+
+  .col-sm-11 {
+      width: 91.53%;
+  }
+  .col-sm-10 {
+      width: 83.06%;
+  }
+
+  .col-sm-9 {
+      width: 74.6%;
+  }
+
+  .col-sm-8 {
+      width: 66.13%;
+  }
+
+  .col-sm-7 {
+      width: 57.66%;
+  }
+
+  .col-sm-6 {
+      width: 49.2%;
+  }
+
+  .col-sm-5 {
+      width: 40.73%;
+  }
+
+  .col-sm-4 {
+      width: 32.26%;
+  }
+
+  .col-sm-3 {
+      width: 23.8%;
+  }
+
+  .col-sm-2 {
+      width: 15.33%;
+  }
+
+  .col-sm-1 {
+      width: 6.866%;
+  }
+
+
+  /* GRID OFFSETS - MEDIUM SCREEN */
+
+  /*descendent selector used to overide column class first child pseudo-class - line 28*/
+  .row > .col-sm-offset-11 {
+    margin-left: 93.13%; /*91.53% + 1.6% - sum of column widths & gutter */
+  }
+
+  .row > .col-sm-offset-10 {
+    margin-left: 84.66%; /*3.06% + 1.6%*/
+  }
+
+  .row > .col-sm-offset-9 {
+    margin-left: 76.2%; /*74.6% + 1.6%*/
+  }
+
+  .row > .col-sm-offset-8 {
+    margin-left: 67.73%; /*66.13% + 1.6%*/
+  }
+
+  .row > .col-sm-offset-7 {
+    margin-left: 59.26%; /*57.66% + 1.6%*/
+  }
+
+  .row > .col-sm-offset-6 {
+    margin-left: 50.8%; /*49.2% + 1.6%*/
+  }
+
+  .row > .col-sm-offset-5 {
+    margin-left: 42.33%; /*40.73% + 1.6%*/
+  }
+
+  .row > .col-sm-offset-4 {
+    margin-left: 33.86%; /*32.26% + 1.6%*/
+  }
+
+  .row > .col-sm-offset-3 {
+    margin-left: 25.4%; /*23.8% + 1.6%*/
+  }
+
+  .row > .col-sm-offset-2 {
+    margin-left: 16.93%; /*15.33% + 1.6%*/
+  }
+
+  .row > .col-sm-offset-1 {
+    margin-left: 8.486%; /*6.886% + 1.6%*/
+  }
+
+  .row > .col-sm-offset-0 {
+    margin-left: 1.6%; /*1.6% - same as column gutter width*/
+  }
+}
+
+
+/* 12 GRID LAYOUT - LARGE SCREEN */
+
+@media (min-width: 992px) {
+
+  .col-lg-12 {
+    width: 100%;
+  }
+
+  .col-lg-11 {
+      width: 91.53%;
+  }
+  .col-lg-10 {
+      width: 83.06%;
+  }
+
+  .col-lg-9 {
+      width: 74.6%;
+  }
+
+  .col-lg-8 {
+      width: 66.13%;
+  }
+
+  .col-lg-7 {
+      width: 57.66%;
+  }
+
+  .col-lg-6 {
+      width: 49.2%;
+  }
+
+  .col-lg-5 {
+      width: 40.73%;
+  }
+
+  .col-lg-4 {
+      width: 32.26%;
+  }
+
+  .col-lg-3 {
+      width: 23.8%;
+  }
+
+  .col-lg-2 {
+      width: 15.33%;
+  }
+
+  .col-lg-1 {
+      width: 6.866%;
+  }
+
+  /* GRID OFFSETS - LARGE SCREEN */
+
+  /*descendent selector used to overide column class first child pseudo-class - line 28*/
+  .row > .col-lg-offset-11 {
+    margin-left: 93.13%; /*91.53% + 1.6% - sum of column widths & gutter */
+  }
+
+  .row > .col-lg-offset-10 {
+    margin-left: 84.66%; /*3.06% + 1.6%*/
+  }
+
+  .row > .col-lg-offset-9 {
+    margin-left: 76.2%; /*74.6% + 1.6%*/
+  }
+
+  .row > .col-lg-offset-8 {
+    margin-left: 67.73%; /*66.13% + 1.6%*/
+  }
+
+  .row > .col-lg-offset-7 {
+    margin-left: 59.26%; /*57.66% + 1.6%*/
+  }
+
+  .row > .col-lg-offset-6 {
+    margin-left: 50.8%; /*49.2% + 1.6%*/
+  }
+
+  .row > .col-lg-offset-5 {
+    margin-left: 42.33%; /*40.73% + 1.6%*/
+  }
+
+  .row > .col-lg-offset-4 {
+    margin-left: 33.86%; /*32.26% + 1.6%*/
+  }
+
+  .row > .col-lg-offset-3 {
+    margin-left: 25.4%; /*23.8% + 1.6%*/
+  }
+
+  .row > .col-lg-offset-2 {
+    margin-left: 16.93%; /*15.33% + 1.6%*/
+  }
+
+  .row > .col-lg-offset-1 {
+    margin-left: 8.486%; /*6.886% + 1.6%*/
+  }
+
+  .row > .col-lg-offset-0 {
+    margin-left: 1.6%; /*1.6% - same as column gutter width*/
+  }
+}

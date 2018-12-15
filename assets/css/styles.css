@@ -1,0 +1,516 @@
+
+/* GENERAL */
+
+body {
+    background-color: #0a1926;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    padding-top: 0;
+    max-width: 1200px;
+}
+
+header {
+    background-color: #000;
+}
+
+section {
+    background-color: #000;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+section:nth-child(odd) {
+    background-color: #202020;
+}
+
+p {
+    color: #6b6b6b;
+    font-size: 14px;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #405a74;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff9f1e;
+    text-decoration: none;
+}
+
+hr {
+    width: 50px;
+    border: solid 2px #405a74;
+    padding: 0;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.page-title {
+    margin-top: 0;
+    color: #FF9404;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.page-subtitle {
+    color: #ffcd37;
+    font-size: 16px;
+    margin: 10px 40px 60px;
+    text-align: center;
+}
+
+.margin-bottom-xs {
+    margin-bottom: 50px;
+}
+
+.margin-bottom {
+    margin-bottom: 65px;
+}
+
+span.highlight {
+    color: rgba(255, 76, 4, 0.8);
+}
+
+@media (min-width:768px) {
+
+    .page-title {
+        margin-top: 0;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .page-subtitle {
+        font-size: 20px;
+        margin: 10px 0 50px;
+    }
+
+    .margin-bottom-xs {
+        margin-bottom: 0;
+    }
+}
+
+/*larger font size on large screens*/
+
+@media (min-width:992px) {
+    p {
+        font-size: 16px;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+
+    .page-subtitle {
+        font-size: 25px;
+    }
+
+    .package>h4 {
+        font-size: 20px;
+    }
+
+}
+
+/*GENERAL-END*/
+
+/* VISIBITY-CLASSES */
+
+.row >.visible-xs {
+    display: block;
+}
+
+.row > .hidden-xs {
+    display: none;
+}   
+
+@media (min-width: 768px) {
+    .row > .visible-xs {
+        display: none;
+    }
+
+    .row > .hidden-xs {
+        display: block;
+    }   
+}
+
+/* VISIBITY-CLASSES-END */
+
+/*FONT AWESOME ICONS*/
+
+.font-awesome-icon .fa {
+    color: #ff9f1e;
+}
+
+.font-awesome-icon {
+    margin: 20px 0 0;
+        margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+/*FONT AWESOME ICONS-END*/
+
+
+/* BANNER */
+
+.bg-banner {
+    color: #FFF;
+    background-color: rgb(34, 49, 63);
+    /*background-image: url(/milestone-project-1/assets/img/bg.jpg);*/
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-banner-inner {
+    background-color: rgba(34, 49, 63, 0.9);
+    padding-top: 230px;
+    padding-bottom: 80px;
+    margin: 0 -30;
+}
+
+.banner-title {
+    color: #FF9404;
+    position: relative;
+    top: 0px;
+    font-family: 'Cabin', sans-serif;
+    font-size: 35px;
+    max-width: 700px;
+    margin: 0 auto 10px;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: bounceInUp;
+    animation-name: bounceInUp;
+    animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;
+}
+
+.banner-subtitle {
+    color: #ffcd37;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 25px;
+    margin: 30px 0 50px;
+    text-align: center;
+}
+
+@media (min-width:768px) {
+
+    .banner-title {
+        font-size: 50px;
+    }
+
+    .banner-subtitle {
+        font-size: 40px;
+    }
+}
+
+@media (min-width:992px) {
+
+    .banner-title {
+        font-size: 60px;
+    }
+
+    .banner-subtitle {
+        font-size: 50px;
+    }
+}
+
+/* BANNER-END */
+
+/* ABOUT */
+
+.page-title--about {
+    font-size: 25px;
+    margin: 60px 0 20px;
+    text-align: center;
+}
+
+
+.page-title--about,
+.page-title--skills {
+    text-align: center;
+}
+
+.about {
+    margin: 0 50px 50px;
+    text-align: justify;
+}
+
+.about-img {
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+}
+
+@media (min-width: 768px) {
+    .img-div {
+        height: 200px;
+        width: 200px;
+    }
+
+    .about-img {
+        position: relative;
+        height: 100%;
+        width: 82%;
+        /*margin: 100px 0 150px;*/
+        margin: 70px 0 100px;
+        box-sizing: content-box;
+    }    
+}
+
+@media (min-width: 820px) {
+    .about {
+        margin: 50px;
+    }
+
+    .page-title--about {
+        font-size: 30px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    /*.img-div {
+        height: 200px;
+        width: 200px;
+    }
+
+    .about-img {
+        position: relative;
+        height: 100%;
+        width: 82%;
+        margin: 70px 0 100px;
+        box-sizing: content-box;
+    }*/
+}
+
+/*@media (min-width:768px) {
+    .about-img {
+        position: relative;
+        height: 100%;
+        width: 82%;
+        margin: 70px 0 100px;
+        box-sizing: content-box;
+    }
+}*/
+
+@media (min-width:992px) {
+    .page-title--about {
+        font-size: 35px;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .about-img {
+        height: 125%;
+        width: 101%;
+        margin: 85px 0 0 40px;
+    }
+
+    /*.about-img {
+        height: 110%;
+        width: 92%;
+        margin: 60px 0 0 40px;
+    }*/
+}
+
+ /*ABOUT-END */
+
+/* PORTFOLIO */
+
+/*left and right margin for portfolio section on medium and large screens*/
+@media (min-width: 768px) {
+    .row-portfolio {
+        margin: 0 12px;
+    }   
+}
+
+.portfolio-img {
+    display: block;
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+a > .portfolio-img:hover {
+    background-color: rgba(255,255,255,.5) !important;
+}
+
+@media (min-width:768px) {
+    .portfolio-img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* PORTFOLIO-END */
+
+/*SERVICES*/
+
+/*.progress {
+    background-color: #121212;
+    border-radius: 4px;
+}*/
+
+/*.progress-bar {
+    background-color: #34495E;
+}*/
+
+.font-awesome-icon--services {
+    margin-top: 15px;
+}
+
+/*fix to position mobile icon correctly*/
+
+.font-awesome-icon--services>.fa-mobile {
+    margin: -10px;
+}
+
+.services {
+    margin: 0 0 20px;
+}
+
+.services>h5 {
+    color: #405a74;
+    font-size: 18px;
+    margin: 10px 0 25px;
+    text-align: center;
+}
+
+.services>p {
+    color: #5e5a5a;
+    text-align: center;
+}
+
+@media (min-width:768px) {
+    .services {
+        margin: 0 0 0 15px;
+    }
+
+    .services>h5 {
+        font-size: 16px;
+        margin: 10px 0;
+        text-align: left;
+    }
+
+    .services>p {
+        text-align: left;
+    }
+}
+
+@media (min-width:992px) {
+    .services>h5 {
+        font-size: 18px;
+    }
+}
+
+/* SERVICES-END */
+
+/* PACKAGES */
+
+.package {
+    background-color: #ECF9BF;
+    border: 6px solid #405a74;
+    border-radius: 4px;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+    max-width: 90%;
+}
+
+.package>h4 {
+    color: #ff4c04;
+}
+
+.package>p {
+    color: #333;
+    padding: 15px;
+    text-align: justify;
+}
+
+.package>p:nth-of-type(2) {
+    text-align: center;
+}
+
+.package>ul>li {
+    color: #333;
+    padding-bottom: 10px;
+    list-style: none;
+}
+
+.package>ul>li>hr {
+    border: 1px solid #405a74;
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+}
+
+/*reduce packages divs width on small screens 380px and above*/
+
+@media (min-width:380px) {
+    .package {
+        max-width: 70%;
+    }
+}
+
+@media (min-width:768px) {
+    .package {
+        margin: 0;
+    }
+
+    .package {
+        /*background-color: #ECF9BF;*/
+        /*border: 6px solid #405a74;*/
+        /*border-radius: 4px;*/
+        margin: 0;
+        /*padding: 5px;*/
+        /*text-align: center;*/
+        max-width: 100%;
+    }
+}
+
+/*PACKAGES-END*/
+
+/* SKILLS */
+
+.skills {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.skills>h5 {
+    color: #ff9404;
+    font-size: 14px;
+}
+
+/*progress bar header styles for medium screen*/
+
+@media (min-width:768px) {
+    .skills>h5 {
+        font-size: 16px;
+    }
+}
+
+/*progress bar header styles for large screen*/
+
+@media (min-width:992px) {
+    .skills>h5 {
+        font-size: 18px;
+    }
+}
+
+/*SKILLS-END*/
+

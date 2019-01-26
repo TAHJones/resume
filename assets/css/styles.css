@@ -1,4 +1,3 @@
-
 /* GENERAL */
 
 body {
@@ -9,23 +8,28 @@ body {
     max-width: 1200px;
 }
 
-header {
+/*header {
     background-color: #000;
-}
+}*/
 
 section {
     background-color: #000;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 50px 0 0;
+    /*padding-top: 0px;*/
+    /*padding-bottom: 0px;*/
 }
 
-section:nth-child(odd) {
+/*section:nth-child(odd) {
     background-color: #202020;
-}
+}*/
 
 p {
-    color: #6b6b6b;
-    font-size: 14px;
+    /*color: #6b6b6b;*/
+    color: #818786;
+    font-size: 22px;
+    line-height: 30px;
+    font-family: 'Chakra', sans-serif;
+    text-align: justify;
 }
 
 ul,
@@ -67,17 +71,17 @@ hr {
     text-align: center;
 }
 
-.margin-bottom-xs {
+/*.margin-bottom-xs {
     margin-bottom: 50px;
-}
+}*/
 
-.margin-bottom {
+/*.margin-bottom {
     margin-bottom: 65px;
-}
+}*/
 
-span.highlight {
+/*span.highlight {
     color: rgba(255, 76, 4, 0.8);
-}
+}*/
 
 @media (min-width:768px) {
 
@@ -100,10 +104,9 @@ span.highlight {
 /*larger font size on large screens*/
 
 @media (min-width:992px) {
-    p {
+    /*p {
         font-size: 16px;
-    }
-
+    }*/
     .page-title {
         font-size: 28px;
     }
@@ -122,27 +125,27 @@ span.highlight {
 
 /* VISIBITY-CLASSES */
 
-.row >.visible-xs {
+.row>.visible-xs {
     display: block;
 }
 
-.row > .hidden-xs {
+.row>.hidden-xs {
     display: none;
-}   
+}
 
 @media (min-width: 768px) {
-    .row > .visible-xs {
+    .row>.visible-xs {
         display: none;
     }
 
-    .row > .hidden-xs {
+    .row>.hidden-xs {
         display: block;
-    }   
+    }
 }
 
 /* VISIBITY-CLASSES-END */
 
-/*FONT AWESOME ICONS*/
+/* FONT-AWESOME-ICONS */
 
 .font-awesome-icon .fa {
     color: #ff9f1e;
@@ -150,13 +153,105 @@ span.highlight {
 
 .font-awesome-icon {
     margin: 20px 0 0;
-        margin-top: 20px;
+    margin-top: 20px;
     text-align: center;
     font-size: 16px;
 }
 
-/*FONT AWESOME ICONS-END*/
+/* FONT-AWESOME-ICONS-END */
 
+/* NAVBAR */
+
+.dropdown {
+    height: 60px;
+    max-width: 1200px;
+}
+
+.dropdownMenu {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    overflow: hidden;
+    width: 100%;
+    height: 60px;
+}
+
+/* Style the links inside the navigation bar */
+
+.dropdownLink {
+
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Change the background color of navbar links on hover */
+
+.dropdownLink:hover {
+    background-color: #444;
+}
+
+/* Position hamburger icon in line with nav links */
+
+.dropdown a.hamburgerIcon {
+    position: relative;
+    top: 2px;
+    right: 10px;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+
+.hamburgerIcon {
+    display: none;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* When the screen is less than 600px pixels wide, hide all links. Make icon visible and position to the right The "mobileMenu" class replaces "dropDownMenu" with JavaScript when the user clicks on the hamburger icon. This class makes the dropdown navbar look good on small screens (display the links vertically instead of horizontally) */
+
+@media screen and (max-width: 600px) {
+    .dropdownMenu a {
+        display: none;
+    }
+
+    .hamburgerIcon a {
+        float: right;
+        display: block;
+    }
+
+    .dropdownMobile {
+        position: relative;
+    }
+
+    .hamburgerIcon {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #222;
+        width: 100%;
+    }
+
+    .dropdownMobile a {
+        background-color: #222;
+        border-top: 2px solid #444;
+        display: block;
+        float: none;
+        transform: translateY(60px);
+        text-align: left;
+        width: 200px;
+        padding-left: 20px;
+        z-index: 1;
+    }
+}
+
+/* NAVBAR-END */
 
 /* BANNER */
 
@@ -168,12 +263,13 @@ span.highlight {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .bg-banner-inner {
-    background-color: rgba(34, 49, 63, 0.9);
-    padding-top: 230px;
-    padding-bottom: 80px;
+    background-color: rgba(34, 49, 63, 0.5);
+    padding-top: 250px;
+    padding-bottom: 200px;
     margin: 0 -30;
 }
 
@@ -183,24 +279,18 @@ span.highlight {
     top: 0px;
     font-family: 'Cabin', sans-serif;
     font-size: 35px;
+    text-shadow: 4px 4px 8px #000;
     max-width: 700px;
     margin: 0 auto 10px;
     text-align: center;
     text-transform: uppercase;
-    -webkit-animation-duration: 0.8s;
-    animation-duration: 0.8s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-name: bounceInUp;
-    animation-name: bounceInUp;
-    animation-delay: 1.5s;
-    -webkit-animation-delay: 1.5s;
 }
 
 .banner-subtitle {
     color: #ffcd37;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 25px;
+    text-shadow: 4px 4px 8px #000;
     margin: 30px 0 50px;
     text-align: center;
 }
@@ -229,31 +319,31 @@ span.highlight {
 
 /* BANNER-END */
 
-/* ABOUT */
+/* PROFESSIONAL-PROFILE */
 
-.page-title--about {
+/*.page-title--profile {
     font-size: 25px;
     margin: 60px 0 20px;
     text-align: center;
 }
+*/
 
-
-.page-title--about,
+/*.page-title--profile,
 .page-title--skills {
     text-align: center;
-}
+}*/
 
-.about {
+/*.profile, .objective {
     margin: 0 50px 50px;
     text-align: justify;
-}
+}*/
 
-.about-img {
+/*.profile-img {
     border-radius: 6px;
     display: block;
     margin: 0 auto;
     width: 90%;
-}
+}*/
 
 @media (min-width: 768px) {
     .img-div {
@@ -261,33 +351,7 @@ span.highlight {
         width: 200px;
     }
 
-    .about-img {
-        position: relative;
-        height: 100%;
-        width: 82%;
-        /*margin: 100px 0 150px;*/
-        margin: 70px 0 100px;
-        box-sizing: content-box;
-    }    
-}
-
-@media (min-width: 820px) {
-    .about {
-        margin: 50px;
-    }
-
-    .page-title--about {
-        font-size: 30px;
-        margin-bottom: 10px;
-        text-align: left;
-    }
-
-    /*.img-div {
-        height: 200px;
-        width: 200px;
-    }
-
-    .about-img {
+    /*.profile-img {
         position: relative;
         height: 100%;
         width: 82%;
@@ -296,45 +360,112 @@ span.highlight {
     }*/
 }
 
-/*@media (min-width:768px) {
-    .about-img {
-        position: relative;
-        height: 100%;
-        width: 82%;
-        margin: 70px 0 100px;
-        box-sizing: content-box;
+@media (min-width: 820px) {
+    /*.profile, .objective {
+        margin: 50px;
+    }*/
+    .page-title--profile {
+        font-size: 30px;
+        margin-bottom: 10px;
+        text-align: left;
     }
-}*/
+}
 
 @media (min-width:992px) {
-    .page-title--about {
+    .page-title--profile {
         font-size: 35px;
         margin-bottom: 15px;
         text-align: left;
     }
 
-    .about-img {
+    /*.profile-img {
         height: 125%;
         width: 101%;
         margin: 85px 0 0 40px;
-    }
-
-    /*.about-img {
-        height: 110%;
-        width: 92%;
-        margin: 60px 0 0 40px;
     }*/
 }
 
- /*ABOUT-END */
+/* PROFESSIONAL-PROFILE-END */
+
+/* TECHNICAL-SKILS */
+
+.font-awesome-icon--technical-skills {
+    margin-top: 15px;
+}
+
+/*fix to position mobile icon correctly*/
+
+/*.font-awesome-icon--technical-skills>.fa-mobile {
+    margin: -10px;
+}*/
+
+.technical-skills {
+    margin: 0 0 20px;
+}
+
+.technical-skills>h5 {
+    color: #405a74;
+    font-size: 24px;
+    margin: 10px 0 25px;
+    text-align: center;
+}
+
+/*.technical-skills>p {
+    color: #5e5a5a;
+    text-align: center;
+}*/
+
+/*@media (min-width:768px) {
+    .technical-skills {
+        margin: 0 0 0 15px;
+    }
+
+    .technical-skills>h5 {
+        font-size: 16px;
+        margin: 10px 0;
+        text-align: left;
+    }
+
+    .technical-skills>p {
+        text-align: left;
+    }
+}*/
+
+/*@media (min-width:992px) {
+    .technical-skills>h5 {
+        font-size: 18px;
+    }
+}*/
+
+/* TECHNICAL-SKILS-END */
+
+/*DEVELOPER-TOOLS*/
+
+.developer-tools li,
+.online-marketing li {
+    color: #818786;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.developer-tools li>span,
+.online-marketing li>span {
+    color: #405a74;
+    font-size: 24px;
+
+}
+
+
+/*DEVELOPER-TOOLS-END*/
 
 /* PORTFOLIO */
 
 /*left and right margin for portfolio section on medium and large screens*/
+
 @media (min-width: 768px) {
     .row-portfolio {
         margin: 0 12px;
-    }   
+    }
 }
 
 .portfolio-img {
@@ -344,8 +475,8 @@ span.highlight {
     margin: 0 auto;
 }
 
-a > .portfolio-img:hover {
-    background-color: rgba(255,255,255,.5) !important;
+a>.portfolio-img:hover {
+    background-color: rgba(255, 255, 255, .5) !important;
 }
 
 @media (min-width:768px) {
@@ -513,4 +644,3 @@ a > .portfolio-img:hover {
 }
 
 /*SKILLS-END*/
-

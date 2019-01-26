@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Web Design & Web Development in Reigate & South London">
+  <meta name="description" content="Resume of Thomas Jones. Web Developer in Reigate & South London">
   <meta name="author" content="Thomas Jones">
-  <title>Thomas Jones | Full Stack Webdeveloper</title>
+  <title>Thomas Jones | Resume</title>
   <link href="assets/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cabin|Chakra+Petch|Roboto" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/grid.css" type="text/css" />
@@ -15,11 +15,26 @@
   <link rel="shortcut icon" href="assets/img/mousecodedesign-flavicon.png">
 </head>
 
-<body>
+<!--<body>-->
+
+<body onresize="removeDropdown()">
   <header>
+
     <!-- NAVBAR -->
-    <nav>
-      
+    <nav class="navbar">
+      <div class="dropdown">
+
+        <div class="dropdownMenu" id="dropdownMenuId">
+          <a href="#" class="dropdownLink">Link</a>
+          <a href="#" class="dropdownLink">Link</a>
+          <a href="#" class="dropdownLink">Link</a>
+          <a href="#" class="dropdownLink">Link</a>
+        </div>
+
+        <div class="hamburgerIcon">
+          <a href="javascript:void(0);" onclick="dropDown()"><i class="fa fa-bars fa-2x"></i></a>
+        </div>
+      </div>
     </nav>
     <!-- NAVBAR-END -->
 
@@ -39,34 +54,293 @@
     <!--BANNER-END -->
   </header>
 
-  <!--ABOUT-->
+  <!--PROFESSIONAL PROFILE-->
+  <section class="bg-profile" id="profile">
+    <div class="container">
+
+      <div class="row">
+        <div class="col col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2">
+          <div class="profile">
+            <h3 class="page-title">Professional Profile</h3>
+            <hr>
+            <p>An enthusiastic and dedicated web developer who enjoys using modern design and coding techniques to build mobile friendly (responsive) websites. Quick to assimilate new skills and technologies whilst demonstrating a logical and analytical
+              approach to solving complex technical problems. Enjoys working as part of a successful and productive team but can operate well on own initiative and has the ability to perform effectively whilst working under pressure. Possesses excellent
+              interpersonal skills and the ability to communicate concisely and articulately with colleagues.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+  <!--PROFESSIONAL PROFILE-END-->
+
+  <!--OBJECTIVE-->
   <section class="bg-about" id="about">
     <div class="container">
 
       <div class="row">
-        <div class="col col-xs-4 col-xs-offset-4 col-sm-3 visible-xs">
-          <div class="img-div">
-            <img class="about-img" src="assets/img/tom.jpg">
+        <div class="col col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2">
+          <div class="objective">
+            <h3 class="page-title">Objective</h3>
+            <hr>
+            <p>Experienced healthcare scientist working for the NHS, retrained and ready for career change. Currently looking for a new and challenging role as a front-end web developer, one which will allow for further professional development and makes
+              best use of existing skills and experience.</p>
           </div>
         </div>
-        <div class="col col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-0 col-lg-6 col-lg-offset-1">
-          <div class="about">
-            <h3 class="page-title page-title--about">Hi, I'm Thomas</h3>
-            <p>I'm a freelance webdeveloper based in South London. I specialise in building mobile friendly (responsive) websites for start-up companies, sole traders and small businesses.</p>
-            <p>I've been making websites for four years and have specialised in building responsive sites for past two years. I use modern design and coding techniques to ensure the sites I build look good, are functional and adapt to whatever mobile, tablet,
-              laptop or desktop device they are viewed on.</p>
-          </div>
-        </div>
-
-        <div class="col col-sm-3 hidden-xs">
-          <div class="img-div">
-            <img class="about-img" src="assets/img/tom.jpg">
-          </div>
-        </div>
-
       </div>
+
     </div>
   </section>
+  <!--OBJECTIVE-END-->
+
+  <!--TECHNICAL-SKILLS-->
+  <section class="bg-technical-skills" id="technical-skills">
+    <div class="container">
+
+      <div class="row">
+        <div class="col col-sm-12">
+          <h3 class="page-title">Technical Skills</h3>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-xs-2 col-xs-offset-3 col-sm-2 col-sm-offset-3">
+          <div class="technical-skills">
+            <h5>HTML5</h5>
+          </div>
+          <div>
+            <img src="assets/img/html5.png">
+          </div>
+        </div>
+        <div class="col col-xs-2 col-xs-offset-2 col-sm-2 col-sm-offset-2">
+          <div class="technical-skills">
+            <h5>CSS3</h5>
+          </div>
+          <div>
+            <img src="assets/img/CSS3.png">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-xs-2 col-xs-offset-3 col-sm-2 col-sm-offset-3">
+          <div class="technical-skills">
+            <h5>Javascript</h5>
+          </div>
+          <div>
+            <img src="assets/img/javascript.png">
+          </div>
+        </div>
+        <div class="col col-xs-2 col-xs-offset-2 col-sm-2 col-sm-offset-2">
+          <div class="technical-skills">
+            <h5>jQuery</h5>
+          </div>
+          <div>
+            <img src="assets/img/jquery.png">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-xs-2 col-xs-offset-3 col-sm-2 col-sm-offset-3">
+          <div class="technical-skills">
+            <h5>SCSS</h5>
+          </div>
+          <div>
+            <img src="assets/img/scss.png">
+          </div>
+        </div>
+        <div class="col col-xs-2 col-xs-offset-2 col-sm-2 col-sm-offset-2">
+          <div class="technical-skills">
+            <h5>Responsive Design</h5>
+          </div>
+          <div>
+            <img src="assets/img/responsive2.png">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-xs-2 col-xs-offset-3 col-sm-2 col-sm-offset-3">
+          <div class="technical-skills">
+            <h5>Foundation 5 & 6</h5>
+          </div>
+          <div>
+            <img src="assets/img/foundation.jpg">
+          </div>
+        </div>
+        <div class="col col-xs-2 col-xs-offset-2 col-sm-2 col-sm-offset-2">
+          <div class="technical-skills">
+            <h5>Bootstrap 3 & 4</h5>
+          </div>
+          <div>
+            <img src="assets/img/bootstrap.png">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-xs-2 col-xs-offset-3 col-sm-2 col-sm-offset-3">
+          <div class="technical-skills">
+            <h5>Slim - PHP</h5>
+          </div>
+          <div>
+            <img src="assets/img/slim.jpg">
+          </div>
+        </div>
+        <div class="col col-xs-2 col-xs-offset-2 col-sm-2 col-sm-offset-2">
+          <div class="technical-skills">
+            <h5>Twig - PHP</h5>
+          </div>
+          <div>
+            <img src="assets/img/twig.png">
+          </div>
+        </div>
+      </div>
+
+      <!--<div class="row margin-bottom">
+        <div class="col col-sm-6 margin-bottom-xs">
+          <div class="row">
+            <div class="col col-xs-12 col-sm-2">
+              <div class="font-awesome-icon font-awesome-icon--technical-skills">
+                <i class="fa fa-server fa-4x"></i>
+              </div>
+            </div>
+            <div class="col col-xs-6 col-xs-offset-3 col-sm-10 col-sm-offset-0">
+              <div class="technical-skills">
+                <h5>Web Hosting</h5>
+                <p>All sites are hosted on reliable & highly secure servers housed here in the UK.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-sm-6">
+          <div class="row">
+            <div class="col col-xs-12 col-sm-2">
+              <div class="font-awesome-icon font-awesome-icon--technical-skills">
+                <i class="fa fa-facebook-official fa-4x"></i>
+              </div>
+            </div>
+            <div class="col col-xs-6 col-xs-offset-3 col-sm-10 col-sm-offset-0">
+              <div class="technical-skills">
+                <h5>Social Media Integration</h5>
+                <p>Have your website linked to your Facebook, LinkedIn or Twitter profile at no extra cost.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-sm-6 margin-bottom-xs">
+          <div class="row">
+            <div class="col col-xs-12 col-sm-2">
+              <div class="font-awesome-icon font-awesome-icon--technical-skills">
+                <i class="fa fa-comments fa-4x"></i>
+              </div>
+            </div>
+            <div class="col col-xs-6 col-xs-offset-3 col-sm-10 col-sm-offset-0">
+              <div class="technical-skills">
+                <h5>Technical Support</h5>
+                <p>Have your websites domain name registered and webhosting set up for free.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col col-sm-6">
+          <div class="row">
+            <div class="col col-xs-12 col-sm-2">
+              <div class="font-awesome-icon font-awesome-icon--technical-skills font-awesome-icon--mobile">
+                <i class="fa fa-mobile fa-5x"></i>
+              </div>
+            </div>
+            <div class="col col-xs-6 col-xs-offset-3 col-sm-10 col-sm-offset-0">
+              <div class="technical-skills">
+                <h5>Responsive Design</h5>
+                <p>Sites are designed to adapt so they look good on all screen sizes from desktop to mobile.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>-->
+
+    </div>
+  </section>
+  <!--TECHNICAL-SKILLS-END-->
+
+  <!--DEVELOPER-TOOLS-->
+  <section>
+    <div class="container">
+
+      <div class="row">
+        <div class="col col-sm-8 col-sm-offset-2">
+          <h3 class="page-title">Developer Tools</h3>
+          <hr>
+          <div class="developer-tools">
+            <ul>
+              <li><span>Text Editor: </span>Sublime Text + Package Control, Emmett, Origami, SublimeLinter</li>
+              <li><span>Operating Systems: </span>Windows 8.1-10, Linux Mint 17-18, Ubuntu 16-18</li>
+              <li><span>Virtual Machines: </span>Vmware, Virtualbox, Cloud9</li>
+              <li><span>FTP: </span>Filezilla, FireFTP, Sublime FTP</li>
+              <li><span>Localserver: </span>Xampp, PHP Built-In Server, Sublime Server, Browser Sync</li>
+              <li><span>Webhosting: </span>iPage, Eco Web Hosting, 123-Reg, TSO Hosting, Github Pages</li>
+              <li><span>CLI: </span>Basic command lines & BASH shell scripting</li>
+              <li><span>Dependency & Package Managers: </span>NPM, Composer, Bower, Compass </li>
+              <li><span>GIMP: </span>Basic image editing, filtering & enhancement, logo design</li>
+              <li><span>Version Control: </span>GIT, Github</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <!--<div class="row">
+        <div class="col col-xs-2 col-xs-offset-3 col-sm-2 col-sm-offset-3">
+          <div class="technical-skills">
+            <h5></h5>
+          </div>
+          <div>
+            <img src="assets/img/.png">
+          </div>
+        </div>
+        <div class="col col-xs-2 col-xs-offset-2 col-sm-2 col-sm-offset-2">
+          <div class="technical-skills">
+            <h5></h5>
+          </div>
+          <div>
+            <img src="assets/img/.png">
+          </div>
+        </div>
+      </div>-->
+
+    </div>
+  </section>
+  <!--DEVELOPER-TOOLS-END-->
+
+  <!--ONLINE-MARKETING-->
+
+  <section>
+    <div class="container">
+
+      <div class="row">
+        <div class="col col-sm-8 col-sm-offset-2">
+          <h3 class="page-title">Online Marketing</h3>
+          <hr>
+          <div class="online-marketing">
+            <ul>
+              <li><span>SEO: </span>Meta data, Keyword placement, 301 redirect, 404 page, Robot.txt file, XML Sitemap </li>
+              <li><span>Pay Per Click Ca
+              mpaigns: </span>Google Adwords</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!--ONLINE-MARKETING-END-->
 
   <!-- PORTFOLIO -->
   <section class="bg-portfolio" id="portfolio">
@@ -103,7 +377,7 @@
   <!-- PORTFOLIO-END -->
 
   <!-- SERVICES-->
-  <section class="bg-services" id="services">
+  <!--  <section class="bg-services" id="services">
     <div class="container">
 
       <div class="row">
@@ -210,11 +484,11 @@
         </div>
       </div>
     </div>
-  </section>
+  </section>-->
   <!--SERVICES-END-->
 
   <!-- PACKAGES -->
-  <section class="bg-packages" id="packages">
+  <!--  <section class="bg-packages" id="packages">
     <div class="container">
 
       <div class="row">
@@ -322,7 +596,7 @@
             <div class="col col-sm-4">
               <div class="package">
                 <h4>Responsive Upgrade Package</h4>
-                <p>Want to keep your existing website but in need of an upgrade? Perhaps your site needs a fresh look, additional features or isn't optimised for mobile devices or tablets. In which case the <span class="highlight">Responsive Upgrade Package</span> is for you.</p>
+                <p>Want to keep your existing website but in need of an upgrade? Perhaps your site needs a fresh look, additional features or isn't optimised for mobile devices or tablets. In which case the <span class="highlight">Responsive Upgrade Package</span>                  is for you.</p>
                 <p>In this package you get:</p>
                 <ul>
                   <li>
@@ -369,11 +643,11 @@
       </div>
 
     </div>
-  </section>
+  </section>-->
   <!-- PACKAGES-END -->
 
   <!-- SKILLS -->
-  <div class="bg-skills" id="skills">
+  <!--  <div class="bg-skills" id="skills">
     <div class="container">
 
       <div class="row">
@@ -418,13 +692,31 @@
       </div>
 
     </div>
-  </div>
+  </div>-->
   <!-- SKILLS-END -->
 
   <section>
-    
+
   </section>
 
+  <script>
+    // Toggle between adding and removing the "mobileMenu" class to topnav when the user clicks on the icon
+    function dropDown() {
+      var x = document.getElementById("dropdownMenuId");
+      if (x.className === "dropdownMenu") {
+        x.className = "dropdownMobile";
+      }
+      else {
+        x.className = "dropdownMenu";
+      }
+    }
+
+    // Replaces mobileMenu class with dropdownMenu on window resize event
+    function removeDropdown() {
+      var x = document.getElementById("dropdownMenuId");
+      x.className = "dropdownMenu";
+    }
+  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 

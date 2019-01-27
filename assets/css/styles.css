@@ -268,7 +268,7 @@ hr {
 
 .bg-banner-inner {
     background-color: rgba(34, 49, 63, 0.5);
-    padding-top: 250px;
+    padding-top: 260px;
     padding-bottom: 200px;
     margin: 0 -30;
 }
@@ -405,10 +405,24 @@ hr {
 
 .technical-skills>h5 {
     color: #405a74;
-    font-size: 24px;
+    font-size: 20px;
     margin: 10px 0 25px;
     text-align: center;
 }
+
+/*select all but the 1st 3 imgs & give them rounded borders*/
+
+/*.technical-skills img:nth-child(4) {
+    border: 2px solid blue;
+    border-radius: 20px;
+}*/
+
+.square-img {
+    border: 2px #000;
+    border-radius: 20px;
+}
+
+
 
 /*.technical-skills>p {
     color: #5e5a5a;
@@ -442,17 +456,22 @@ hr {
 /*DEVELOPER-TOOLS*/
 
 .developer-tools li,
-.online-marketing li {
+.online-marketing li,
+.qualifications li {
     color: #818786;
     font-size: 20px;
     margin-bottom: 40px;
 }
 
-.developer-tools li>span,
-.online-marketing li>span {
-    color: #405a74;
-    font-size: 24px;
+/*.qualifications li {
+    text-align: center;
+}*/
 
+.developer-tools li>span,
+.online-marketing li>span,
+.qualifications li>span {
+    color: #405a74;
+    /*font-size: 20px;*/
 }
 
 
@@ -470,9 +489,20 @@ hr {
 
 .portfolio-img {
     display: block;
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto 40px;
+    /*border: 2px solid #222;*/
+}
+
+/*.row-portfolio:nth-of-type(2) .col:nth-of-type(2) .portfolio-img {
+    border: 2px solid #fff;
+}*/
+
+/*add dark grey border to only mousecodedesign site img*/
+
+.row-portfolio:nth-of-type(3) .col:nth-of-type(2) .portfolio-img {
+    border: 2px solid #222;
 }
 
 a>.portfolio-img:hover {

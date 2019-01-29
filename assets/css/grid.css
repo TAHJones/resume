@@ -80,6 +80,12 @@ table {
   margin: 1% 0 1% 1.6%;
 }
 
+.col-collapse {
+  display: block;
+  float:left;
+  margin: 0;
+}
+
 .col:first-child { margin-left: 0; }
 
 

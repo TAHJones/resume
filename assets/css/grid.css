@@ -80,6 +80,8 @@ table {
   margin: 1% 0 1% 1.6%;
 }
 
+/*creates column without margins*/
+
 .col-collapse {
   display: block;
   float:left;

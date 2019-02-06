@@ -86,8 +86,8 @@ hr {
 
     p {
         /*color: #818786;*/
-        font-size: 18px;
-        line-height: 26px;
+        font-size: 16px;
+        line-height: 22px;
         /*font-family: 'Chakra', sans-serif;*/
         /*text-align: justify;*/
     }
@@ -132,21 +132,21 @@ hr {
 
 /* VISIBITY-CLASSES */
 
-.row>.visible-xs {
-    display: block;
+.visible-xs {
+    display: block !important;
 }
 
-.row>.hidden-xs {
-    display: none;
+.hidden-xs {
+    display: none !important;
 }
 
 @media (min-width: 768px) {
-    .row>.visible-xs {
-        display: none;
+    .row .visible-xs {
+        display: none !important;
     }
 
-    .row>.hidden-xs {
-        display: block;
+    .row .hidden-xs {
+        display: block !important;
     }
 }
 
@@ -219,6 +219,39 @@ hr {
     font-size: 20px;
 }
 
+.fixedMenu {
+
+    position: fixed;
+    top: 25%;
+    width: 130px;
+    right: -120px;
+    border-left: 12px solid #ff9404;
+    transition: all .9s ease-in-out;
+    z-index: 2;
+}
+
+.fixedMenu > a.dropdownLink {
+    float: right;
+    display: block;
+    text-align: left;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 12px;
+    background-color: rgb(24, 24, 27);
+    transition: all .5s ease-in-out;
+    width: 100px;
+    z-index: 11;
+}
+
+.fixedMenu:hover {
+    right: 0;
+    border-color: #333;
+}
+
+.fixedMenu > a.dropdownLink:hover {
+    background-color: #222;
+}
+
 /* When the screen is less than 600px pixels wide, hide all links. Make icon visible and position to the right The "mobileMenu" class replaces "dropDownMenu" with JavaScript when the user clicks on the hamburger icon. This class makes the dropdown navbar look good on small screens (display the links vertically instead of horizontally) */
 
 @media screen and (max-width: 600px) {
@@ -264,7 +297,7 @@ hr {
 .bg-banner {
     color: #FFF;
     background-color: rgb(34, 49, 63);
-    /*background-image: url(/milestone-project-1/assets/img/bg.jpg);*/
+    /*background-image: url(/resume/assets/img/bg.jpg);*/
     background-image: url(../img/bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -455,7 +488,7 @@ hr {
 
 .technical-skills>h5 {
     color: #405a74;
-    font-size: 16px;
+    font-size: 14px;
     margin: 10px 0 25px;
     text-align: center;
 }
@@ -485,6 +518,15 @@ hr {
     color: #5e5a5a;
     text-align: center;
 }*/
+
+@media (min-width: 410px) {
+    .technical-skills>h5 {
+        /*color: #405a74;*/
+        font-size: 16px;
+        /*margin: 10px 0 25px;*/
+        /*text-align: center;*/
+    }  
+}
 
 @media (min-width:768px) {
     /*.technical-skills {
@@ -530,7 +572,17 @@ hr {
 .qualifications li>span,
 .hobbies li>span {
     color: #405a74;
-    font-size: 14px;
+    font-size: 12px;
+}
+
+@media (min-width: 410px) {
+    .developer-tools li>span,
+    .online-marketing li>span,
+    .qualifications li>span,
+    .hobbies li>span {
+        /*color: #405a74;*/
+        font-size: 14px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -545,7 +597,6 @@ hr {
     .online-marketing li>span,
     .qualifications li>span,
     .hobbies li>span {
-        /*color: #405a74;*/
         font-size: 16px;
     }
 }
@@ -597,7 +648,7 @@ hr {
 
 .overlay-text {
     color: #FF9404;
-    font-size: 40px;
+    font-size: 25px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -623,6 +674,12 @@ hr {
     border: 2px solid #222;
 }*/
 
+@media (min-width: 410px) {
+    .overlay-text {
+        font-size: 30px;
+    }
+}
+
 @media (min-width:768px) {
     .portfolio-img {
         width: 100%;
@@ -630,7 +687,7 @@ hr {
     }
 
     .overlay-text {
-        font-size: 30px;
+        font-size: 28px;
     }
 }
 
@@ -638,14 +695,14 @@ hr {
 
 /*CAREER*/
 
-.bg-career-history .career {
+/*.bg-career-history .career {
     margin-bottom: 40px;
-}
+}*/
 
 .career > h4 {
     color: #405a74;
-    font-size: 14px;
-    margin: 20px 0 15px;
+    font-size: 12px;
+    margin: 30px 0 15px 52px;
 }
 
 ul.career-title {
@@ -656,12 +713,31 @@ ul.career-title {
 ul.career-title > li{
     color: #405a74;
     float: left;
-    font-size: 14px;
+    font-size: 12px;
     display: inline-block;
     list-style: none;
     padding-right: 5%;
     text-align: left;
     width: 30%;
+}
+
+/*fix for career-list heading below 410px width*/
+
+/*ul.homeopath > li {
+    font-size: 12px;
+}*/
+
+
+@media (min-width: 410px) {
+    .career > h4 {
+        /*color: #405a74;*/
+        font-size: 14px;
+        /*margin: 30px 0 15px 52px;*/
+    }    
+
+    ul.career-title > li {
+        font-size: 14px;
+    }
 }
 
 
@@ -707,18 +783,29 @@ ul.career-list > li:before {
     left: -30px;
 }
 
-.career ul:nth-of-type(3) > li:before {
+ul.responsiblities-list > li:before {
     content: "\f0b1"; /*fontAwesome Unicode - fa-briefcase*/
     color: #7d5f2d;
 }
 
-.career ul:nth-of-type(4) > li:before {
+/*.career ul:nth-of-type(3) > li:before {
+    content: "\f0b1"; fontAwesome Unicode - fa-briefcase
+    color: #7d5f2d;
+}*/
+
+
+ul.publications-list > li:before {
     content: "\f02d"; /*fontAwesome Unicode - fa-book*/
     color: #9bbb78;
 }
 
+/*.career ul:nth-of-type(4) > li:before {
+    content: "\f02d"; fontAwesome Unicode - fa-book
+    color: #9bbb78;
+}*/
+
 .bg-career-history .career:not(first-child) {
-    margin-top: 50px;
+    margin-top: 60px;
 }
 
 @media (min-width: 768px) {
@@ -726,6 +813,49 @@ ul.career-list > li:before {
     /*ul.career-title > li:nth-of-type(2) {
         text-align: center;
     }*/
+
+    /*.career {
+        margin: 0 6%;
+    }*/
+
+    ul.career-title > li {
+        /*color: #405a74;*/
+        /*float: left;*/
+        font-size: 16px;
+        /*display: inline-block;*/
+        /*list-style: none;*/
+        padding-right: 5%;
+        /*text-align: left;*/
+        /*width: 30%;*/
+    }
+
+    .career > h4 {
+        /*color: #405a74;*/
+        font-size: 16px;
+        margin: 40px 0 20px 60px;
+    }
+
+    ul.career-list > li {
+        /*text-align: left;*/
+        /*color: #818786;*/
+        font-size: 14px;
+        /*margin-bottom: 20px;*/
+        /*line-height: 15px;*/
+        /*position: relative;*/
+        left: 30px;
+    }
+
+    ul.career-list > li:before {
+        /*content: "\f005"; fontAwesome Unicode - fa-star*/
+        /*font-family: FontAwesome;*/
+        /*font-style: normal;*/
+        /*font-weight: normal;*/
+        /*color:#ffcd37;*/
+        font-size: 16px;
+        /*position: absolute;*/
+        /*top: 0;*/
+        left: -35px;
+    }
 }
 
 

@@ -8,26 +8,20 @@ body {
     max-width: 1200px;
 }
 
-/*header {
-    background-color: #000;
-}*/
-
 section {
     background-color: #000;
     padding: 50px 0 0;
-    /*padding-top: 0px;*/
-    /*padding-bottom: 0px;*/
 }
 
-/*section:nth-child(odd) {
-    background-color: #202020;
-}*/
+section:last-of-type {
+    padding-bottom: 80px;
+}
 
 p {
     color: #818786;
     font-size: 14px;
     line-height: 25px;
-    font-family: 'Chakra', sans-serif;
+    /*font-family: 'Chakra', sans-serif;*/
     text-align: justify;
 }
 
@@ -70,26 +64,11 @@ hr {
     text-align: center;
 }
 
-/*.margin-bottom-xs {
-    margin-bottom: 50px;
-}*/
-
-/*.margin-bottom {
-    margin-bottom: 65px;
-}*/
-
-/*span.highlight {
-    color: rgba(255, 76, 4, 0.8);
-}*/
-
 @media (min-width:768px) {
 
     p {
-        /*color: #818786;*/
         font-size: 16px;
         line-height: 22px;
-        /*font-family: 'Chakra', sans-serif;*/
-        /*text-align: justify;*/
     }
 
     .page-title {
@@ -102,18 +81,14 @@ hr {
         font-size: 20px;
         margin: 10px 0 50px;
     }
-
-    .margin-bottom-xs {
-        margin-bottom: 0;
-    }
 }
 
 /*larger font size on large screens*/
 
 @media (min-width:992px) {
-    /*p {
+    p {
         font-size: 16px;
-    }*/
+    }
     .page-title {
         font-size: 28px;
     }
@@ -154,16 +129,16 @@ hr {
 
 /* FONT-AWESOME-ICONS */
 
-.font-awesome-icon .fa {
+/*.font-awesome-icon .fa {
     color: #ff9f1e;
-}
+}*/
 
-.font-awesome-icon {
+/*.font-awesome-icon {
     margin: 20px 0 0;
     margin-top: 20px;
     text-align: center;
     font-size: 16px;
-}
+}*/
 
 /* FONT-AWESOME-ICONS-END */
 
@@ -190,9 +165,31 @@ hr {
     float: left;
     display: block;
     text-align: center;
-    padding: 22px;
+    padding: 24px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
+}
+
+@media (min-width:600px) {    
+    .dropdownLink:last-child {
+        float: right;
+        background-color: #202020;
+        color: #ff9f1e;
+        margin: 12px 10px;
+        padding: 10px;
+        border: solid 2px transparent;
+        border-radius: 4px;
+    }
+
+    .dropdownLink:last-child:hover{
+        background-color: #000;
+        border: 2px solid #405A74;
+        color: #FF4C04;
+        transition: all .5s ease-in-out;
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+    }
 }
 
 /* Change the background color of navbar links on hover */
@@ -220,36 +217,69 @@ hr {
 }
 
 .fixedMenu {
-
     position: fixed;
-    top: 25%;
+    top: 50%;
     width: 130px;
     right: -120px;
     border-left: 12px solid #ff9404;
-    transition: all .9s ease-in-out;
-    z-index: 2;
+    border-left-color: rgb(255, 148, 4);
+    z-index: 1;
+    transform: translateY(-50%);
+    /*transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;*/
+  height: 192px;
 }
 
 .fixedMenu > a.dropdownLink {
-    float: right;
     display: block;
     text-align: left;
-    padding: 15px;
-    text-decoration: none;
+    padding: 0 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-size: 12px;
     background-color: rgb(24, 24, 27);
-    transition: all .5s ease-in-out;
     width: 100px;
-    z-index: 11;
+    z-index: 1;
+    border: none;
+    border-radius: 0;   
+    color: #405a74;
+    margin: 0;
+    transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
 }
 
+/*make fixed menu visible when hovering on border, change border color on hover */
 .fixedMenu:hover {
     right: 0;
     border-color: #333;
+    transition: right .9s ease-in-out;
+}
+
+/*had to add :not(:hover) to get transition effect when hover ends. adding transition to .fixedMenu class created strange transition effect then menu first appears*/
+.fixedMenu:not(:hover) {
+    transition: right .9s ease-in-out;
+}
+
+/*removes transition effect when nabar link is clicked so fixed menu is initally hidden*/
+.noTransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+.hideFixedMenu {
+    display: none !important;
 }
 
 .fixedMenu > a.dropdownLink:hover {
     background-color: #222;
+    border: none;
+    color: #ff9f1e;
 }
 
 /* When the screen is less than 600px pixels wide, hide all links. Make icon visible and position to the right The "mobileMenu" class replaces "dropDownMenu" with JavaScript when the user clicks on the hamburger icon. This class makes the dropdown navbar look good on small screens (display the links vertically instead of horizontally) */
@@ -285,7 +315,7 @@ hr {
         transform: translateY(60px);
         text-align: left;
         width: 200px;
-        padding-left: 20px;
+        padding: 20px;
         z-index: 1;
     }
 }
@@ -308,8 +338,7 @@ hr {
 .bg-banner-inner {
     background-color: rgba(34, 49, 63, 0.5);
     padding-top: 180px;
-    /*padding-bottom: 10px;*/
-    margin: 0 -30;
+    /*margin: 0 -30;*/
 }
 
 .banner-title {
@@ -334,32 +363,63 @@ hr {
     text-align: center;
 }
 
-.contact-bg {
+.contact-details-bg {
     margin: 180px 0 0px;
     background-color: rgba(0, 0, 0, .5);
     padding: 20px 0;
 }
 
-/*.contact {
-    margin: 190px 0 0px;
-    background-color: rgba(0,0,0,.5);
-    padding: 20px 0;
-}*/
-
 .address>h4,
-.contact>h4 {
-    margin: 10px 0 18px;
-    font-size: 20px;
-    text-align: center;
+.contact-details>h4 {
+    margin: 8px 0;
+    font-size: 18px;
+    text-align: left;
 }
 
 .address>ul>li,
-.contact>ul>li {
-    color: #818786;
-    font-size: 12px;
+.contact-details>ul>li {
+    color: #99b4b0;
+    font-size: 10px;
     margin: 5px 0;
-    text-align: center;
-    text-shadow: 4px 4px 8px #000;
+    text-align: left;
+    text-shadow: 2px 2px 4px #000;
+}
+
+@media (min-width: 421px) {
+    .address>h4,
+    .contact-details>h4 {
+        margin: 10px 0;
+        font-size: 18px;
+        text-align: center;
+    }
+    .address>ul>li,
+    .contact-details>ul>li {
+        font-size: 11px;
+        text-align: center;
+
+    }
+}
+
+@media (min-width: 456px) {
+    .address>h4,
+    .contact-details>h4 {
+        margin: 10px 0;
+        font-size: 20px;
+        text-align: center;
+    }
+    .address>ul>li,
+    .contact-details>ul>li {
+        font-size: 12px;
+        text-align: center;
+
+    }
+}
+
+@media (min-width: 531px) {
+    .address>ul>li,
+    .contact-details>ul>li {
+        font-size: 14px;
+    }
 }
 
 @media (min-width:768px) {
@@ -372,20 +432,23 @@ hr {
         font-size: 40px;
     }
 
+    .address,
+    .contact-details {
+        margin-left: 35px;
+    }
+
     .address>h4,
-    .contact>h4 {
+    .contact-details>h4 {
         margin: 10px 0 20px 10px;
         font-size: 22px;
         text-align: left;
     }
 
     .address>ul>li,
-    .contact>ul>li {
-        /*color: #818786;*/
-        font-size: 15px;
+    .contact-details>ul>li {
+        font-size: 14px;
         margin: 10px 0;
         text-align: left;
-        /*text-shadow: 4px 4px 8px #000;*/
     }
 }
 
@@ -404,23 +467,6 @@ hr {
 
 /* PROFESSIONAL-PROFILE */
 
-/*.page-title--profile {
-    font-size: 25px;
-    margin: 60px 0 20px;
-    text-align: center;
-}
-*/
-
-/*.page-title--profile,
-.page-title--skills {
-    text-align: center;
-}*/
-
-/*.profile, .objective {
-    margin: 0 50px 50px;
-    text-align: justify;
-}*/
-
 /*.profile-img {
     border-radius: 6px;
     display: block;
@@ -428,59 +474,17 @@ hr {
     width: 90%;
 }*/
 
-@media (min-width: 768px) {
-    .img-div {
-        height: 200px;
-        width: 200px;
-    }
+/*@media (min-width: 768px) {
+ 
+}*/
 
-    /*.profile-img {
-        position: relative;
-        height: 100%;
-        width: 82%;
-        margin: 70px 0 100px;
-        box-sizing: content-box;
-    }*/
-}
-
-@media (min-width: 820px) {
-    /*.profile, .objective {
-        margin: 50px;
-    }*/
-    .page-title--profile {
-        font-size: 30px;
-        margin-bottom: 10px;
-        text-align: left;
-    }
-}
-
-@media (min-width:992px) {
-    .page-title--profile {
-        font-size: 35px;
-        margin-bottom: 15px;
-        text-align: left;
-    }
-
-    /*.profile-img {
-        height: 125%;
-        width: 101%;
-        margin: 85px 0 0 40px;
-    }*/
-}
+/*@media (min-width:992px) {
+    
+}*/
 
 /* PROFESSIONAL-PROFILE-END */
 
-/* TECHNICAL-SKILS */
-
-.font-awesome-icon--technical-skills {
-    margin-top: 15px;
-}
-
-/*fix to position mobile icon correctly*/
-
-/*.font-awesome-icon--technical-skills>.fa-mobile {
-    margin: -10px;
-}*/
+/* TECHNICAL-SKILLS */
 
 .technical-skills {
     margin: 0 0 20px;
@@ -500,46 +504,21 @@ hr {
     margin: 0 auto;
 }
 
-/*select all but the 1st 3 imgs & give them rounded borders*/
-
-/*.technical-skills img:nth-child(4) {
-    border: 2px solid blue;
-    border-radius: 20px;
-}*/
-
 .square-img {
     border: 2px #000;
     border-radius: 20px;
 }
 
-
-
-/*.technical-skills>p {
-    color: #5e5a5a;
-    text-align: center;
-}*/
-
 @media (min-width: 410px) {
     .technical-skills>h5 {
-        /*color: #405a74;*/
         font-size: 16px;
-        /*margin: 10px 0 25px;*/
-        /*text-align: center;*/
     }  
 }
 
 @media (min-width:768px) {
-    /*.technical-skills {
-        margin: 0 0 0 15px;
-    }*/
-
     .technical-skills>h5 {
         font-size: 20px;
     }
-
-    /*.technical-skills>p {
-        text-align: left;
-    }*/
 
     .technical-skills img {
         width: 55%;
@@ -547,11 +526,16 @@ hr {
     }
 }
 
-/*@media (min-width:992px) {
+@media (min-width:992px) {
     .technical-skills>h5 {
-        font-size: 18px;
+        font-size: 22px;
     }
-}*/
+
+    .technical-skills img {
+        width: 50%;
+        height: 50%;
+    }
+}
 
 /* TECHNICAL-SKILS-END */
 
@@ -580,7 +564,6 @@ hr {
     .online-marketing li>span,
     .qualifications li>span,
     .hobbies li>span {
-        /*color: #405a74;*/
         font-size: 14px;
     }
 }
@@ -601,18 +584,25 @@ hr {
     }
 }
 
+@media (min-width: 992px) {
+    .developer-tools li,
+    .online-marketing li,
+    .qualifications li,
+    .hobbies li {
+        font-size: 16px;
+    }
+
+    .developer-tools li>span,
+    .online-marketing li>span,
+    .qualifications li>span,
+    .hobbies li>span {
+        font-size: 18px;
+    }
+}
 
 /*DEVELOPER-TOOLS-END*/
 
 /* PORTFOLIO */
-
-/*left and right margin for portfolio section on medium and large screens*/
-
-/*@media (min-width: 768px) {
-    .row-portfolio {
-        margin: 0 12px;
-    }
-}*/
 
 .portfolio-img {
     display: block;
@@ -652,9 +642,9 @@ hr {
     position: absolute;
     top: 50%;
     left: 50%;
-    /*-webkit-transform: translate(-50%, -50%);*/
-    /*-ms-transform: translate(-50%, -50%);*/
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     text-align: center;
     text-shadow: 2px 2px 2px #000;
 }
@@ -667,12 +657,6 @@ hr {
 .overlay-container-6:hover .overlay {
     opacity: 1;
 }
-
-/*add dark grey border to only mousecodedesign site img*/
-
-/*.row-portfolio:nth-of-type(3) .col:nth-of-type(2) .portfolio-img {
-    border: 2px solid #222;
-}*/
 
 @media (min-width: 410px) {
     .overlay-text {
@@ -691,13 +675,20 @@ hr {
     }
 }
 
+@media (min-width:992px) {
+    .portfolio-img {
+        width: 80%;
+        height: 80%;
+    }
+
+    .overlay-text {
+        font-size: 30px;
+    }
+}
+
 /* PORTFOLIO-END */
 
 /*CAREER*/
-
-/*.bg-career-history .career {
-    margin-bottom: 40px;
-}*/
 
 .career > h4 {
     color: #405a74;
@@ -722,29 +713,15 @@ ul.career-title > li{
 }
 
 /*fix for career-list heading below 410px width*/
-
-/*ul.homeopath > li {
-    font-size: 12px;
-}*/
-
-
 @media (min-width: 410px) {
     .career > h4 {
-        /*color: #405a74;*/
         font-size: 14px;
-        /*margin: 30px 0 15px 52px;*/
     }    
 
     ul.career-title > li {
         font-size: 14px;
     }
 }
-
-
-/*align 2nd list item to right to compensate for padding on right for small screens*/
-/*.career ul > li:nth-of-type(2) {
-    text-align: right;
-}*/
 
 ul.career-title > li:nth-of-type(2) {
     text-align: center;
@@ -788,227 +765,162 @@ ul.responsiblities-list > li:before {
     color: #7d5f2d;
 }
 
-/*.career ul:nth-of-type(3) > li:before {
-    content: "\f0b1"; fontAwesome Unicode - fa-briefcase
-    color: #7d5f2d;
-}*/
-
-
 ul.publications-list > li:before {
     content: "\f02d"; /*fontAwesome Unicode - fa-book*/
     color: #9bbb78;
 }
-
-/*.career ul:nth-of-type(4) > li:before {
-    content: "\f02d"; fontAwesome Unicode - fa-book
-    color: #9bbb78;
-}*/
 
 .bg-career-history .career:not(first-child) {
     margin-top: 60px;
 }
 
 @media (min-width: 768px) {
-    /*switch text-align to center for medium & large screens*/
-    /*ul.career-title > li:nth-of-type(2) {
-        text-align: center;
-    }*/
-
-    /*.career {
-        margin: 0 6%;
-    }*/
-
     ul.career-title > li {
-        /*color: #405a74;*/
-        /*float: left;*/
         font-size: 16px;
-        /*display: inline-block;*/
-        /*list-style: none;*/
         padding-right: 5%;
-        /*text-align: left;*/
-        /*width: 30%;*/
     }
 
     .career > h4 {
-        /*color: #405a74;*/
         font-size: 16px;
         margin: 40px 0 20px 60px;
     }
 
     ul.career-list > li {
-        /*text-align: left;*/
-        /*color: #818786;*/
         font-size: 14px;
-        /*margin-bottom: 20px;*/
-        /*line-height: 15px;*/
-        /*position: relative;*/
         left: 30px;
     }
 
     ul.career-list > li:before {
-        /*content: "\f005"; fontAwesome Unicode - fa-star*/
-        /*font-family: FontAwesome;*/
-        /*font-style: normal;*/
-        /*font-weight: normal;*/
-        /*color:#ffcd37;*/
         font-size: 16px;
-        /*position: absolute;*/
-        /*top: 0;*/
         left: -35px;
     }
 }
 
+@media (min-width: 992px) {
+    ul.career-title > li {
+        font-size: 18px;
+        padding-right: 5%;
+    }
+
+    .career > h4 {
+        font-size: 18px;
+        margin: 40px 0 20px 60px;
+    }
+
+    ul.career-list > li {
+        font-size: 16px;
+        left: 30px;
+    }
+
+    ul.career-list > li:before {
+        font-size: 18px;
+        left: -35px;
+    }
+}
 
 /*CAREER-END*/
 
+/*CONTACT*/
 
-/*SERVICES*/
-
-/*.progress {
-    background-color: #121212;
-    border-radius: 4px;
-}*/
-
-/*.progress-bar {
-    background-color: #34495E;
-}*/
-
-/*.font-awesome-icon--services {
-    margin-top: 15px;
-}*/
-
-/*fix to position mobile icon correctly*/
-
-/*.font-awesome-icon--services>.fa-mobile {
-    margin: -10px;
+.bg-contact {
+    color: #FFCD37;
 }
 
-.services {
-    margin: 0 0 20px;
+.form {
+    margin: 0 auto 20px;
 }
 
-.services>h5 {
-    color: #405a74;
-    font-size: 18px;
-    margin: 10px 0 25px;
-    text-align: center;
+label {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #ffcd37;
 }
 
-.services>p {
-    color: #5e5a5a;
-    text-align: center;
-}
-
-@media (min-width:768px) {
-    .services {
-        margin: 0 0 0 15px;
-    }
-
-    .services>h5 {
-        font-size: 16px;
-        margin: 10px 0;
-        text-align: left;
-    }
-
-    .services>p {
-        text-align: left;
-    }
-}
-
-@media (min-width:992px) {
-    .services>h5 {
-        font-size: 18px;
-    }
-}*/
-
-/* SERVICES-END */
-
-/* PACKAGES */
-
-/*.package {
-    background-color: #ECF9BF;
-    border: 6px solid #405a74;
-    border-radius: 4px;
-    margin: 0 auto;
-    padding: 5px;
-    text-align: center;
-    max-width: 90%;
-}
-
-.package>h4 {
-    color: #ff4c04;
-}
-
-.package>p {
-    color: #333;
-    padding: 15px;
-    text-align: justify;
-}
-
-.package>p:nth-of-type(2) {
-    text-align: center;
-}
-
-.package>ul>li {
-    color: #333;
-    padding-bottom: 10px;
-    list-style: none;
-}
-
-.package>ul>li>hr {
-    border: 1px solid #405a74;
-    margin: 0 auto;
-    padding: 0;
-    width: 90%;
-} */
-
-/*reduce packages divs width on small screens 380px and above*/
-
-/*@media (min-width:380px) {
-    .package {
-        max-width: 70%;
-    }
-}
-
-@media (min-width:768px) {
-    .package {
-        margin: 0;
-    }
-
-    .package {
-        margin: 0;
-        max-width: 100%;
-    }
-}*/
-
-/*PACKAGES-END*/
-
-/* SKILLS */
-
-/*.skills {
-    margin: 0 auto;
-    width: 70%;
-}
-
-.skills>h5 {
-    color: #ff9404;
+.form-input {
+    display: block;
+    width: 100%;
+    height: 45px;
+    padding: 6px 12px;
     font-size: 14px;
-}*/
+    line-height: 2.5;
+    color: #222;
+    background-color: #b3aea0;
+    border: 4px solid #bbb;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    font-weight: bold;
+}
 
-/*progress bar header styles for medium screen*/
+.form-input:focus {
+    background-color: #E9BC83;
+    border: solid 4px #eee;
+    transition: all .75s ease-in-out;
+    -webkit-transition: all .75s ease-in-out;
+    -moz-transition: all .75s ease-in-out;
+    -o-transition: all .75s ease-in-out;
+}
 
-/*@media (min-width:768px) {
-    .skills>h5 {
-        font-size: 16px;
+/*remove orange background color when not in focus*/
+.form-input:not(:focus) {
+    color: #222;
+    transition: all .75s ease-in-out;
+    -webkit-transition: all .75s ease-in-out;
+    -moz-transition: all .75s ease-in-out;
+    -o-transition: all .75s ease-in-out;
+}
+
+.form-input:placeholder {
+    color: #000;
+    opacity: 1;
+}
+
+input.form-input {
+    height: 30px;
+    width: 85%;
+    display: block;
+}
+
+textarea.form-input {
+    height: 200px;
+    width: 85%;
+    display: block;
+}
+
+@media (min-width:410px) {
+    input.form-input,
+    textarea.form-input {
+        width: 95%
     }
-}*/
+}
 
-/*progress bar header styles for large screen*/
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    cursor: pointer;
+}
 
-/*@media (min-width:992px) {
-    .skills>h5 {
-        font-size: 18px;
-    }
-}*/
+.btn-submit, .btn-reset {
+    background-color: #202020;
+    color: #ff9f1e;
+    font-size: 14px;
+    padding: 8px 18px;
+    border: solid 2px transparent;
+    border-radius: 4px;
+    margin-right: 12px;
+}
 
-/*SKILLS-END*/
+.btn-submit:hover, .btn-reset:hover {
+    background-color: #000;
+    border: 2px solid #405A74;
+    color: #FF4C04;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+/*CONTACT-END*/

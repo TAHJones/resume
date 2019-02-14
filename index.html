@@ -15,7 +15,8 @@
   <link rel="shortcut icon" href="assets/img/flavicon.png">
 </head>
 
-<body onresize="removeDropdown()" onscroll="scrollingMenu()">
+<!-- <body onresize="removeDropdown()" onscroll="scrollingMenu()"> -->
+<body>
   <header>
 
     <!-- NAVBAR -->
@@ -23,16 +24,16 @@
       <div class="dropdown">
 
         <div class="dropdownMenu" id="dropdownMenuId">
-          <a href="index.html#profile" class="dropdownLink">Profile</a>
+          <a href="index.html#profile" id="dropdownLinkId" class="dropdownLink">Profile</a>
           <a href="index.html#skills" class="dropdownLink">Skills</a>
           <a href="index.html#portfolio" class="dropdownLink">Portfolio</a>
           <a href="index.html#qualifications" class="dropdownLink">Qualifications</a>
           <a href="index.html#career" class="dropdownLink">Career</a>
-          <a href="index.html#hobbies" class="dropdownLink">Hobbies</a>
+          <a href="index.html#contact" class="dropdownLink">Contact</a>
         </div>
 
         <div class="hamburgerIcon">
-          <a href="javascript:void(0);" onclick="dropDown()"><i class="fa fa-bars fa-2x"></i></a>
+          <a id="hamburgeIconId"><i class="fa fa-bars fa-2x"></i></a>
         </div>
       </div>
     </nav>
@@ -46,37 +47,36 @@
             <h1 class="banner-title">Thomas Jones</h1>
             <h2 class="banner-subtitle">Full Stack Webdeveloper</h2>
 
-            <div class="contact-bg">
-            <div class="row">
-              <div class="col col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-2">
-                <div class="address">
-                  <h4>Address</h4>
-                  <ul>
-                    <li>6 Stuart Crescent</li>
-                    <li>Reigate</li>
-                    <li>Surrey</li>
-                    <li>RH2 8EB</li>
-                  </ul>
+            <div class="contact-details-bg">
+              <div class="row">
+                <div class="col col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-2">
+                  <div class="address">
+                    <h4>Address</h4>
+                    <ul>
+                      <li>6 Stuart Crescent</li>
+                      <li>Reigate</li>
+                      <li>Surrey</li>
+                      <li>RH2 8EB</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col col-xs-6 col-xs-offset-3 col-sm-5 col-sm-offset-1">
+                  <div class="contact-details">
+                    <h4>Contact Details</h4>
+                    <ul>
+                      <li>Phone: 07585896343</li>
+                      <li>Email: tahjones75@gmail.com</li>
+                      <li>https://www.linkedin.com/in/tahjones</li>
+                      <li>https://github.com/TAHJones</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-              <div class="col col-xs-6 col-xs-offset-3 col-sm-5 col-sm-offset-1">
-                <div class="contact">
-                  <h4>Contact Details</h4>
-                  <ul>
-                    <li>Phone: 07585896343</li>
-                    <li>Email: tahjones75@gmail.com</li>
-                    <li>https://www.linkedin.com/in/tahjones</li>
-                    <li>https://github.com/TAHJones</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
             </div>
 
           </div>
         </div>
       </div>
-    </div>
     </div>
     <!--BANNER-END -->
   </header>
@@ -130,13 +130,13 @@
       <div class="col col-xs-5 col-xs-offset-1 col-sm-5 col-sm-offset-1">
         <div class="technical-skills">
           <h5>HTML5</h5>
-          <img src="assets/img/html5.png">
+          <img src="assets/img/html5.png" alt="HTML5 logo">
         </div>
       </div>
       <div class="col col-xs-5 col-xs-offset-0 col-sm-5 col-sm-offset-0">
         <div class="technical-skills">
           <h5>CSS3</h5>
-          <img src="assets/img/CSS3.png">
+          <img src="assets/img/CSS3.png" alt="CSS3 logo">
         </div>
       </div>
     </div>
@@ -145,13 +145,13 @@
       <div class="col col-xs-5 col-xs-offset-1 col-sm-5 col-sm-offset-1">
         <div class="technical-skills">
           <h5>Javascript</h5>
-          <img src="assets/img/javascript.png">
+          <img src="assets/img/javascript.png" alt="Javascript logo">
         </div>
       </div>
       <div class="col col-xs-5 col-xs-offset-0 col-sm-5 col-sm-offset-0">
         <div class="technical-skills">
           <h5>jQuery</h5>
-          <img class="square-img" src="assets/img/jquery.png">
+          <img class="square-img" src="assets/img/jquery.png" alt="jQuery logo">
         </div>
       </div>
     </div>
@@ -160,13 +160,13 @@
       <div class="col col-xs-5 col-xs-offset-1 col-sm-5 col-sm-offset-1">
         <div class="technical-skills">
           <h5>SCSS</h5>
-          <img class="square-img" src="assets/img/scss.png">
+          <img class="square-img" src="assets/img/scss.png" alt="SCSS logo">
         </div>
       </div>
       <div class="col col-xs-5 col-xs-offset-0 col-sm-5 col-sm-offset-0">
         <div class="technical-skills">
           <h5>Responsive Design</h5>
-          <img class="square-img" src="assets/img/responsive-icon.png">
+          <img class="square-img" src="assets/img/responsive-icon.png" alt="responsive webdesign logo">
         </div>
       </div>
     </div>
@@ -175,13 +175,13 @@
       <div class="col col-xs-5 col-xs-offset-1 col-sm-5 col-sm-offset-1">
         <div class="technical-skills">
           <h5>Foundation 5 & 6</h5>
-          <img class="square-img" src="assets/img/foundation.jpg">
+          <img class="square-img" src="assets/img/foundation.jpg" alt="Zurb Foundation logo">
         </div>
       </div>
       <div class="col col-xs-5 col-xs-offset-0 col-sm-5 col-sm-offset-0">
         <div class="technical-skills">
           <h5>Bootstrap 3 & 4</h5>
-          <img src="assets/img/bootstrap.png">
+          <img src="assets/img/bootstrap.png" alt="Bootstrap logo">
         </div>
       </div>
     </div>
@@ -190,13 +190,13 @@
       <div class="col col-xs-5 col-xs-offset-1 col-sm-5 col-sm-offset-1">
         <div class="technical-skills">
           <h5>Slim - PHP</h5>
-          <img class="square-img" src="assets/img/slim.jpg">
+          <img class="square-img" src="assets/img/slim.jpg" alt="Slim PPHP framework logo">
         </div>
       </div>
       <div class="col col-xs-5 col-xs-offset-0 col-sm-5 col-sm-offset-0">
         <div class="technical-skills">
           <h5>Twig - PHP</h5>
-          <img class="square-img" src="assets/img/twig.png">
+          <img class="square-img" src="assets/img/twig.png" alt="Twig PHP template engine logo">
         </div>
       </div>
     </div>
@@ -548,7 +548,7 @@
   <!--CAREER-HISTORY-END-->
 
   <!--HOBBIES-->
-  <section class="bg-hobbies" id="hobbies">
+  <!-- <section class="bg-hobbies" id="hobbies">
     <div class="row">
       <div class="col col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-3">
         <h3 class="page-title">Hobbies and Interests</h3>
@@ -560,46 +560,115 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   <!--HOBBIES-END-->
 
+  <!--FORM-->
+  <section id="contact">
+    <div class="row">
+      <div class="col col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2">
+        <h3 class="page-title page-title--contact">Contact</h3>
+        <hr>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2">
+
+        <form class="contact-form" id="contactForm" action="" method="post">
+          <div class="form-container">
+            <div class="form">
+              <label for="firstName">First Name</label>
+              <input type="text" class="form-input" id="firstName" placeholder="Your First Name" required="">
+            </div>
+
+            <div class="form">
+              <label for="lastName">Last Name</label>
+              <input type="text" class="form-input" name="lastname" id="lastName" placeholder="Your Last Name" required="">
+            </div>
+
+            <div class="form">
+              <label for="email">Email</label>
+              <input type="email" class="form-input" name="email" id="email" placeholder="Your Email Address" required="">
+            </div>
+
+            <div class="form">
+              <label for="msg">Description</label>
+              <textarea class="form-input" name="msg" id="msg" placeholder="Your Message" required=""></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-submit">Submit</button> <button type="reset" class="btn btn-reset">Reset</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+  <!--FORM-END-->
+
   <script>
-    // Toggle between adding and removing the "mobileMenu" class to topnav when the user clicks on the icon
+
+    // get the navbar element
+    var dropdownMenu = document.getElementById("dropdownMenuId");
+
+    //get the hamburger icon anchor element
+    var hamburgerIcon = document.getElementById("hamburgeIconId");
+
+    // Toggle between adding and removing the "mobileMenu" class to topnav when the user clicks on the hamburgericon
     function dropDown() {
-      var x = document.getElementById("dropdownMenuId");
-      if (x.className === "dropdownMenu") {
-        x.className = "dropdownMobile";
+      if (dropdownMenu.className === "dropdownMenu") {
+        dropdownMenu.className = "dropdownMobile";
       }
       else {
-        x.className = "dropdownMenu";
+        dropdownMenu.className = "dropdownMenu";
       }
     }
 
-    // Replaces mobileMenu class with dropdownMenu on window resize event
+    // trigger the dropDown function when the hamburger icon anchor element is clicked
+    hamburgerIcon.addEventListener("click", dropDown, false);
+
+    // replaces mobileMenu class with dropdownMenu on window resize event
     function removeDropdown() {
-      var x = document.getElementById("dropdownMenuId");
-      x.className = "dropdownMenu";
+      dropdownMenu.className = "dropdownMenu";
     }
 
-    // Get the navbar
-    var fixedMenu = document.getElementById("dropdownMenuId");
+    // trigger removeDropdown function on window resize event
+    window.addEventListener("resize", removeDropdown, false);
+
+    // reassign dropDownMenu variable for navbar element as fixedMenu
+    var fixedMenu = dropdownMenu;
+
+    // get the section of the page where the fixed menu will appear
     var profile = document.getElementById("profile");
 
-    // Get the offset position of the navbar
+    // get the offset position of the navbar
     var fixedPosition = profile.offsetTop;
 
-    // Add the sticky class to the navbar when you reach its scroll position. Remove the sticky class when you leave the scroll position.
+    // add the noTransition class if dropdown menu is clickedfixedMenu class to the navbar when you reach its scroll position.
     function scrollingMenu() {
-      if (window.pageYOffset  >= fixedPosition) {
-        // fixedMenu.classList.add("fixedMenu")
+      if (window.pageYOffset >= fixedPosition && fixedMenu.className === "hideFixedMenu") {
+        fixedMenu.className = "noTransition";
+      } else if (window.pageYOffset >= fixedPosition && fixedMenu.className != "hideFixedMenu") {
         fixedMenu.className = "fixedMenu";
       } else {
         fixedMenu.className = "dropdownMenu";
       }
+       // Trigger a reflow, flushing the CSS changes
+      fixedMenu.offsetHeight;
     }
+ 
+    // trigger scrollingMenu function on scroll event
+    window.addEventListener("scroll", scrollingMenu, false);
+
+    // if dropdown menu anchor tag is clicked change class name to hideFixedMenu to hide fixed menu during transition
+    dropdownMenu.addEventListener("click", function(e) {
+      if (e.target.className === "dropdownLink") {
+        dropdownMenu.className = "hideFixedMenu";
+        console.log(e.target.className);       
+      }
+    }, false);
 
   </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 
 </html>

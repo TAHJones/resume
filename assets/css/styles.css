@@ -5,7 +5,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0 auto;
     padding-top: 0;
-    max-width: 1200px;
+    max-width: 1000px;
 }
 
 section {
@@ -87,7 +87,7 @@ hr {
 
 @media (min-width:992px) {
     p {
-        font-size: 16px;
+        font-size: 18px;
     }
     .page-title {
         font-size: 28px;
@@ -96,11 +96,6 @@ hr {
     .page-subtitle {
         font-size: 25px;
     }
-
-    .package>h4 {
-        font-size: 20px;
-    }
-
 }
 
 /*GENERAL-END*/
@@ -149,7 +144,7 @@ hr {
 
 /*The "mobileMenu" class replaces "dropDownMenu" with JavaScript when the user clicks on the hamburger icon. This class makes the dropdown navbar look good on small screens, display the links vertically instead of horizontally*/
 .hamburgerIcon {
-    background-color: #000;
+    background-color: #18181b;
     display: block;
     font-size: 20px;
     padding: 10px 10px;
@@ -162,7 +157,7 @@ hr {
 }
 
 .dropdownMobile a {
-    background-color: #000;
+    background-color: #18181b;
     border-top: 2px solid #444;
     display: block;
     float: none;
@@ -173,6 +168,10 @@ hr {
     z-index: 1;
 }
 
+.dropdownMobile a:hover {
+    background-color: #222;
+}
+
 
 /* When the screen reaches 600px pixels wide, unhide all links. Add additional styles to last link. Remove hamburger icon. */
 @media (min-width:600px) {
@@ -180,7 +179,7 @@ hr {
         position: relative;
         top: 0;
         left: 0;
-        background-color: #000;
+        background-color: #18181b;
         overflow: hidden;
         width: 100%;
         height: 60px;
@@ -412,7 +411,7 @@ hr {
 
     .address,
     .contact-details {
-        margin-left: 35px;
+        margin-left:40px;
     }
 
     .address>h4,
@@ -438,6 +437,29 @@ hr {
 
     .banner-subtitle {
         font-size: 50px;
+    }
+
+    .address,
+    .contact-details {
+        margin-left: 50px;
+    }
+
+    .contact-details {
+        margin-left: 15px;
+    }
+
+    .address>h4,
+    .contact-details>h4 {
+        /*margin-left: 20px;*/
+        font-size: 26px;
+        /*text-align: left;*/
+    }
+
+    .address>ul>li,
+    .contact-details>ul>li {
+        font-size: 18px;
+        /*margin: 10px 0;*/
+        text-align: left;
     }
 }
 
@@ -527,6 +549,12 @@ hr {
     font-size: 12px;
     margin-bottom: 20px;
     line-height: 20px;
+}
+
+.developer-tools li,
+.online-marketing li,
+.qualifications li {
+    text-align: center;
 }
 
 .developer-tools li>span,

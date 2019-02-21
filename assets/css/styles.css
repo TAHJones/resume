@@ -14,7 +14,7 @@ section {
 }
 
 section:last-of-type {
-    padding-bottom: 80px;
+    padding-bottom: 50px;
 }
 
 p {
@@ -32,7 +32,7 @@ li {
 }
 
 a {
-    color: #405a74;
+    color: #587da2;
     text-decoration: none;
 }
 
@@ -258,7 +258,7 @@ hr {
     z-index: 1;
     border: none;
     border-radius: 0;   
-    color: #405a74;
+    color: #587da2;
     margin: 0;
     transition: all .25s ease-in-out;
     -webkit-transition: all .25s ease-in-out;
@@ -305,7 +305,7 @@ hr {
     color: #FFF;
     background-color: rgb(34, 49, 63);
     /*background-image: url(/resume/assets/img/bg.jpg);*/
-    background-image: url(../img/bg.jpg);
+    background-image: url(../img/banner-image.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -491,7 +491,7 @@ hr {
 }
 
 .technical-skills>h5 {
-    color: #405a74;
+    color: #587da2;
     font-size: 14px;
     margin: 10px 0 25px;
     text-align: center;
@@ -551,17 +551,17 @@ hr {
     line-height: 20px;
 }
 
-.developer-tools li,
+/*.developer-tools li,
 .online-marketing li,
 .qualifications li {
     text-align: center;
-}
+}*/
 
 .developer-tools li>span,
 .online-marketing li>span,
 .qualifications li>span,
 .hobbies li>span {
-    color: #405a74;
+    color: #587da2;
     font-size: 12px;
 }
 
@@ -575,6 +575,12 @@ hr {
 }
 
 @media (min-width: 768px) {
+
+    /*.developer-tools li,*/
+    /*.online-marketing li,*/
+    .qualifications li {
+        text-align: center;
+    }
     .developer-tools li,
     .online-marketing li,
     .qualifications li,
@@ -697,7 +703,7 @@ hr {
 /*CAREER*/
 
 .career > h4 {
-    color: #405a74;
+    color: #587da2;
     font-size: 12px;
     margin: 30px 0 15px 52px;
 }
@@ -708,7 +714,7 @@ ul.career-title {
 }
 
 ul.career-title > li{
-    color: #405a74;
+    color: #587da2;
     float: left;
     font-size: 12px;
     display: inline-block;
@@ -930,3 +936,18 @@ textarea.form-input {
 }
 
 /*CONTACT-END*/
+
+/*FOOTER*/
+
+footer {
+    background-color: #000;
+    padding: 50px 0;
+}
+
+#copyRight {
+    color: #818786;
+    font-size: 14px;
+    text-align: center;
+}
+
+/*FOOTER-END*/

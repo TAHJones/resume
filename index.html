@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="assets/css/grid.css" type="text/css" />
   <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
   <link rel="shortcut icon" href="assets/img/flavicon.png">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+  <!--<script src="assets/js/github.js"></script>-->
 </head>
 
 <body>
@@ -605,10 +607,20 @@
   <!--FORM-END-->
 
   <!-- GOOGLE-MAPS-->
-  <section>
+  <!--<section>
     <div id="map"></div>
-  </section>
+  </section>-->
   <!--GOOGLE-MAPS-END-->
+  
+  <!-- GITHUB -->
+  <section>
+    <div class="github-form">
+      <input type="text" id="githubUserName" value="octocat" oninput="fetchGithubInfo()" />
+      <div id="githubUserData"></div>
+      <div id="githubRepoData"></div>
+    </div>
+  </section>
+  <!-- GITHUB-END -->
 
   <!--FOOTER-->
   <footer>
@@ -620,9 +632,13 @@
   </footer>
   <!--FOOTER-END-->
 
-  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzU4CSGzpSUtlImQMP7RUOPFEfuaBORPQ&callback=initMap"></script>
-  <script type="text/javascript" src="assets/js/scripts.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+  <!--<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>-->
+  <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzU4CSGzpSUtlImQMP7RUOPFEfuaBORPQ&callback=initMap"></script>-->
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/github.js"></script>
+  <!--<script src="assets/js/github.js"></script>-->
 </body>
 
 </html>

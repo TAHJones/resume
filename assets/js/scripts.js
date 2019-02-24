@@ -77,12 +77,12 @@ copyRight.innerHTML = copyRightText;
 
 
 // add google map with cluster markers
-function initMap() {
+/*function initMap() {
   var map = new google.maps.Map(document.getElementById("map"), {
     zoom: 3,
     center: {
-      // lat: 46.1619261,
-      // lng: -33.134766
+      lat: 46.1619261,
+      lng: -33.134766
       lat: 40.785091,
       lng: -73.96825
     }
@@ -101,9 +101,9 @@ function initMap() {
       position: location,
       label: labels[i % labels.length]
     });
-  });
+  });*/
 
   // Add a marker clusterer to manage the markers.
-  var markerCluster = new MarkerClusterer(map, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
+/*  var markerCluster = new MarkerClusterer(map, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
 
-}
+}*/

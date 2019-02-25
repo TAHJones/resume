@@ -13,6 +13,19 @@
   <link rel="stylesheet" href="assets/css/grid.css" type="text/css" />
   <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
   <link rel="shortcut icon" href="assets/img/flavicon.png">
+  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+  <script type="text/javascript">
+    var templateParams = {
+      name: 'Thomas',
+      notes: 'Hello, does this work?'
+    };
+    (function(){
+      emailjs.init("user_6NRsN7acuhPl2ZkEJuF66");
+      emailjs.send("gmail", "resume_contact", {name:"Thomas", notes: "This is a message from my online resume!"});
+      // emailjs.send("gmail", "template_esyYhWdO", templateParams, "user_6NRsN7acuhPl2ZkEJuF66");
+      // emailjs.send(serviceID, templateID, templateParams, userID);
+    })();
+  </script>
   <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
   <!--<script src="assets/js/github.js"></script>-->
 </head>

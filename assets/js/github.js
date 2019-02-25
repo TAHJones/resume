@@ -1,4 +1,5 @@
 function userInfoHTML(user) {
+    console.info(user);
     return `<h2>${user.name}
         <span class="small-name">
             (@<a href="${user.html_url}" target="_blank">${user.login}</a>)
@@ -67,6 +68,9 @@ function fetchGithubInfo(event) {
               if(errorResponse.status === 404) {
                   $("#githubUserData").html(
                       `<h2>No info found for user ${username}</h2>`);
+              } else if (errorResponse.status === 403) {
+                  var resetTime = new Date(errorResponse.getResponseHeader('X-RateLmit-Reset')*1000);
+                  $("#githubUserData").html(`<h4>Too many requests, please wait until ${resetTime.toLocaleTimeString()}</h4>`)
               } else {
                   console.log(errorResponse);
                   $("#githubUserData").html(

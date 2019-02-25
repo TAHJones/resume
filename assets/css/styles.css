@@ -854,18 +854,19 @@ ul.publications-list > li:before {
     display: inline;
 }*/
 
-/*#githubUserData > h2 {
+#githubUserData > h2,
+#githubUserData > h4 {
 	color: #222;
 	font-size: 18px;
 	padding: 10px 5px;
-}*/
+}
 
-/*#loader > img {
+#loader > img {
 	width: 50px;
 	position: relative;
 	top: 20px;
 	left: 10px;
-}*/
+}
 
 .small-name {
   font-size: 0.75em;

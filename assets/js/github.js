@@ -1,5 +1,5 @@
 function userInfoHTML(user) {
-    console.info(user);
+    // console.info(user);
     return `<h2>${user.name}
         <span class="small-name">
             (@<a href="${user.html_url}" target="_blank">${user.login}</a>)

@@ -310,6 +310,7 @@ hr {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    height: 1300px;
 }
 
 .bg-banner-inner {
@@ -341,8 +342,9 @@ hr {
 }
 
 .contact-details-bg {
-    margin: 180px 0 0px;
     background-color: rgba(0, 0, 0, .5);
+    height: 800px;
+    margin: 180px 0 0px;
     padding: 20px 0;
 }
 
@@ -846,17 +848,77 @@ ul.publications-list > li:before {
 
 /* GITHUB */
 
-/*.github-form div {
-    display: inline-block;
+.github-form {
+	position: relative;
+	top: 25px;
+	left: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 330px;
+}
+
+.github-form > h4 {
+	font-size: 20px;
+	text-align: center;
+	padding: 30px 0 40px;
+}
+
+#githubUserName {
+	/*position: relative;*/
+	/*left: 50px;*/
+	/*top: 50%;*/
+	/*transform: translateY(-50%);*/
+	/*vertical-align: middle;*/
+	/*display: inline-block;*/
+	margin-bottom: 10px;
+}
+
+.github-info {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(0%, -50%);
+}
+
+.github-info > label {
+	display: block;
+	max-width: 100%;
+	margin-bottom: 10px;
+	font-weight: 700;
+	color: #405a74;
+	font-size: 14px;
+	font-style: italic;
+}
+
+#githubUserImg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-113%, -50%);
+}
+
+.github-avatar {
+	width: 140px;
+	height: 140px;
+	border: 4px solid #405a74;
+	border-radius: 12px;
+}
+
+#githubRepoData {
+	position: relative;
+	top: 200px;
+	width: 100%;
+	height: 200px;
+	background-color: #000;
+	overflow: hidden;
+}
+
+/*#githubUserData > h2 {
+	color: #99b4b0;
 }*/
 
-/*#githubUserData {
-    display: inline;
-}*/
-
-#githubUserData > h2,
-#githubUserData > h4 {
-	color: #222;
+#githubUserData > h2 {
+	color: #99b4b0;
 	font-size: 18px;
 	padding: 10px 5px;
 }
@@ -886,9 +948,20 @@ ul.publications-list > li:before {
 }*/
 
 .repo-list {
-  display: block;
-  clear: both;
-  width: 100%;
+	position: absolute;
+	margin: 0 10px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+}
+
+.repo-list > p {
+	font-size: 18px;
+	margin-left: 12px;
+	display: inline-block;
+	margin-bottom: 10px;
+	/*font-family: inherit;*/
 }
 
 .repo-list ul {
@@ -901,34 +974,41 @@ ul.publications-list > li:before {
 
 .repo-list ul li a {
   font-weight: bold;
-  padding: 6px 9px;
+  font-size: 12px;
+  padding: 4px 6px;
   display: block;
   float: left;
-  margin-right: 10px;
+  margin-left: 12px;
   margin-bottom: 10px;
   text-decoration: none;
-  border: 1px solid #356492;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  color: #fff;
-  background-color: #3673af;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#5597d8), to(#3673af));
-  background-image: -webkit-linear-gradient(top, #5597d8, #3673af);
-  background-image: -moz-linear-gradient(top, #5597d8, #3673af);
-  background-image: -ms-linear-gradient(top, #5597d8, #3673af);
-  background-image: -o-linear-gradient(top, #5597d8, #3673af);
-  background-image: linear-gradient(top, #5597d8, #3673af);
+  border: 2px solid #202020;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  color: #ff9f1e;
+  background-color: #202020;
+  /*background-image: -webkit-gradient(linear, left top, left bottom, from(#5597d8), to(#3673af));*/
+  /*background-image: -webkit-linear-gradient(top, #5597d8, #3673af);*/
+  /*background-image: -moz-linear-gradient(top, #5597d8, #3673af);*/
+  /*background-image: -ms-linear-gradient(top, #5597d8, #3673af);*/
+  /*background-image: -o-linear-gradient(top, #5597d8, #3673af);*/
+  /*background-image: linear-gradient(top, #5597d8, #3673af);*/
+    transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
 }
 
 .repo-list ul li a:hover {
-  background-color: #396895;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#4b87c2), to(#396895));
-  background-image: -webkit-linear-gradient(top, #4b87c2, #396895);
-  background-image: -moz-linear-gradient(top, #4b87c2, #396895);
-  background-image: -ms-linear-gradient(top, #4b87c2, #396895);
-  background-image: -o-linear-gradient(top, #4b87c2, #396895);
-  background-image: linear-gradient(top, #4b87c2, #396895);
+    color: #FF4C04;
+    background-color: #000;
+    border: 2px solid #405A74;
+    /*background-image: -webkit-gradient(linear, left top, left bottom, from(#4b87c2), to(#396895));*/
+    /*background-image: -webkit-linear-gradient(top, #4b87c2, #396895);*/
+    /*background-image: -moz-linear-gradient(top, #4b87c2, #396895);*/
+    /*background-image: -ms-linear-gradient(top, #4b87c2, #396895);*/
+    /*background-image: -o-linear-gradient(top, #4b87c2, #396895);*/
+    /*background-image: linear-gradient(top, #4b87c2, #396895);*/
 }
 
 .repo-list ul li a:active {

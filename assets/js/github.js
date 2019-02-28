@@ -1,3 +1,11 @@
+function userImgHTML(user) {
+    return `<div class="gh-avatar">
+        <a href="${user.html_url}" target="_blank">
+            <img class="github-avatar" src=${user.avatar_url}" width="80" height="80" alt="${user.login}" />
+        </a>
+    </div>`;
+}
+
 function userInfoHTML(user) {
     // console.info(user);
     return `<h2>${user.name}
@@ -6,11 +14,6 @@ function userInfoHTML(user) {
         </span>
     </h2>
     <div class="gh-content">
-        <div class="gh-avatar">
-            <a href="${user.html_url}" target="_blank">
-                <img src=${user.avatar_url}" width="80" height="80" alt="${user.login}" />
-            </a>
-        </div>
         <p>Followers: ${user.followers} - Following ${user.following} 
         <br> Repos: ${user.public_repos}</p>
     </div>`;
@@ -28,9 +31,7 @@ function repoInfoHTML(repos) {
     });
 
     return `<div class="clearfix repo-list">
-                <p>
-                    <strong>Repo List:</strong>
-                </p>
+                <p>Repo List:</p>
                 <ul>
                     ${listItemsHTML.join("\n")}
                 </ul>
@@ -43,6 +44,7 @@ Client Secret
     c49aff84b80e852010d3db77a67d36e9657ccb35*/
 
 function fetchGithubInfo(event) {
+    $("#githubUserImg").html("");
     $("#githubUserData").html("");
     $("#githubRepoData").html("");
     var username = $("#githubUserName").val();
@@ -62,6 +64,7 @@ function fetchGithubInfo(event) {
           function(firstResponse, secondResponse) {
               var userData = firstResponse[0];
               var repoData = secondResponse[0];
+              $("#githubUserImg").html(userImgHTML(userData));
               $("#githubUserData").html(userInfoHTML(userData));
               $("#githubRepoData").html(repoInfoHTML(repoData));
           },  function(errorResponse) {

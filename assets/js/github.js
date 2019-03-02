@@ -1,3 +1,13 @@
+/*Github API account information:
+Client ID
+8a05f7492e0c0d6c92e2
+Client Secret
+c49aff84b80e852010d3db77a67d36e9657ccb35*/
+
+function githubLink(user) {
+    return `https://github.com/${user.name}`;
+}
+
 function userImgHTML(user) {
     return `<div class="gh-avatar">
         <a href="${user.html_url}" target="_blank">
@@ -7,7 +17,6 @@ function userImgHTML(user) {
 }
 
 function userInfoHTML(user) {
-    // console.info(user);
     return `<h2>${user.name}
         <span class="small-name">
             (@<a href="${user.html_url}" target="_blank">${user.login}</a>)
@@ -31,25 +40,22 @@ function repoInfoHTML(repos) {
     });
 
     return `<div class="clearfix repo-list">
-                <p>Repo List:</p>
+                <p>Latest Repositories:</p>
                 <ul>
                     ${listItemsHTML.join("\n")}
                 </ul>
             </div>`;
 }
- 
-/*Client ID
-    8a05f7492e0c0d6c92e2
-Client Secret
-    c49aff84b80e852010d3db77a67d36e9657ccb35*/
 
+// on input event get fetchGithubInfo function to retrieve user data from Github API
 function fetchGithubInfo(event) {
+    $("#githubLink").html("");
     $("#githubUserImg").html("");
     $("#githubUserData").html("");
     $("#githubRepoData").html("");
     var username = $("#githubUserName").val();
     if (!username) {
-        $("#githubUserData").html(`<h2>Please enter a GitHub username</h2>`);
+        $("#githubUserData").html(`<p>Please enter a GitHub username</p>`);
         return;
     }
     
@@ -62,11 +68,21 @@ function fetchGithubInfo(event) {
       $.getJSON(`https://api.github.com/users/${username}/repos`)
       ).then(
           function(firstResponse, secondResponse) {
-              var userData = firstResponse[0];
-              var repoData = secondResponse[0];
-              $("#githubUserImg").html(userImgHTML(userData));
-              $("#githubUserData").html(userInfoHTML(userData));
-              $("#githubRepoData").html(repoInfoHTML(repoData));
+             var userData = firstResponse[0];
+             var repoData = secondResponse[0];
+             // sort array of repo objects by id number
+             var sortRepoData = repoData.sort(function(a, b){
+                return a.id - b.id;
+            });
+            // reverse array of sorted objects so most recent is first
+            var reverseRepoData= sortRepoData.reverse();
+            // limit the number of objects in array to most recent 15 
+            var mostRecentRepoData = reverseRepoData.slice(0,14);
+            // add Github data to Github section of html page using custom functions
+            $("#githubLink").html(githubLink(userData));
+            $("#githubUserImg").html(userImgHTML(userData));
+            $("#githubUserData").html(userInfoHTML(userData));
+            $("#githubRepoData").html(repoInfoHTML(mostRecentRepoData));
           },  function(errorResponse) {
               if(errorResponse.status === 404) {
                   $("#githubUserData").html(

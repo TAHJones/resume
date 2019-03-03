@@ -5,7 +5,7 @@ var formName = contactForm.elements.namedItem('name').value;
 var formEmail = contactForm.elements.namedItem('email').value;
 var formMsg = contactForm.elements.namedItem('msg').value;
 
-// insert input value variables into templateParams varaible in json format
+// insert input value variables into templateParams variable in json format
 var templateParams = {
     "from_name": formName,
     "from_email": formEmail,

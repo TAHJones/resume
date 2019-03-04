@@ -111,11 +111,11 @@ hr {
 }
 
 @media (min-width: 768px) {
-    .row .visible-xs {
+    .visible-xs {
         display: none !important;
     }
 
-    .row .hidden-xs {
+    .hidden-xs {
         display: block !important;
     }
 }
@@ -158,13 +158,13 @@ hr {
 
 .dropdownMobile a {
     background-color: #18181b;
-    border-top: 2px solid #444;
+    border-top: 2px solid #222;
     display: block;
     float: none;
     transform: translateY(60px);
     text-align: left;
     width: 200px;
-    padding: 15px;
+    padding: 12px 15px;
     z-index: 1;
 }
 
@@ -172,6 +172,28 @@ hr {
     background-color: #222;
 }
 
+/*make download icon visible on small screen sizes, added anchor element to selector to override dropdownLink class*/ 
+a.download-cv-icon {
+	display: block !important;
+	font-size: 25px;
+	position: relative;
+	top: -5px;
+}
+
+/*make standard download link invisible on small screen sizes*/
+.download-cv {
+    display: none !important;
+}
+
+/*make download icon invisible on dropdown menu*/
+.dropdownMobile .download-cv-icon {
+    display: none !important;
+}
+
+/*make standard download link visible on dropdown menu*/
+.dropdownMobile .download-cv {
+    display: block !important;
+}
 
 /* When the screen reaches 600px pixels wide, unhide all links. Add additional styles to last link. Remove hamburger icon. */
 @media (min-width:600px) {
@@ -190,7 +212,7 @@ hr {
         float: left;
         display: block;
         text-align: center;
-        padding: 24px;
+        padding: 24px 18px;
         text-decoration: none;
         font-size: 14px;
     }
@@ -227,6 +249,27 @@ hr {
     }
 }
 
+@media (min-width:768px) {
+    /*make download icon invisible on small screen sizes, added anchor element to selector to override dropdownLink class*/
+    a.download-cv-icon {
+        display: none !important;
+    }
+    
+    /*make standard download link visible on small screen sizes*/
+    .download-cv {
+        display: block !important;
+    }
+    
+    .dropdownLink {
+    	/*float: left;*/
+    	/*display: block;*/
+    	/*text-align: center;*/
+    	padding: 24px;
+    	/*text-decoration: none;*/
+    	/*font-size: 14px;*/
+    }
+}
+
 /* NAVBAR-END */
 
 /* FIXED-MENU */
@@ -251,7 +294,7 @@ hr {
     padding-right: 25px;
     padding-top: 20px;
     padding-bottom: 20px;
-    padding: 20px 25px;
+    padding: 16px 25px;
     font-size: 16px;
     background-color: rgb(24, 24, 27);
     width: 100%;
@@ -295,6 +338,16 @@ hr {
     background-color: #222;
     border: none;
     color: #ff9f1e;
+}
+
+/*make download icon invisible on fixed menu, added anchor element to selector to override dropdownLink class*/
+.fixedMenu > a.download-cv-icon {
+    display: none !important;
+}
+
+/*make standard download link visible on fixed menu, added anchor element to selector to override dropdownLink class*/
+.fixedMenu > a.download-cv {
+    display: block !important;
 }
 
 /*FIXED-MENU-END*/
@@ -562,6 +615,50 @@ hr {
 }
 
 /* BANNER-END */
+
+/*DOWNLOAD-CV*/
+
+/*.download-cv-bg {
+    position: relative;
+    top: -172px;
+    left: 0;
+}*/
+
+/*.download-cv {
+	background-color: rgba(0, 0, 0, .6);
+	color: #ff9f1e;
+	font-size: 22px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,50%);
+	padding: 6px 40px 20px 34px;
+	 border: #222 solid 3px; 
+	border-radius: 10px;
+	transition: all .25s ease-in-out;
+	-webkit-transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+}*/
+
+/*.download-cv:hover {
+    color: #FF4C04;
+    background-color: rgba(0, 0, 0, .8);
+    border: 2px solid #222;
+}*/
+
+/*.download-cv::before {
+	content: "\f019";
+	font-family: FontAwesome;
+	color: #405A74;
+	font-size: 42px;
+	position: relative;
+	top: 8px;
+	left: 5px;
+	margin-right: 24px;
+}*/
+
+/*DOWNLOAD-CV-END*/
+
 
 /* PROFESSIONAL-PROFILE */
 

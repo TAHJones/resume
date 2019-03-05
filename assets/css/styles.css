@@ -122,6 +122,59 @@ hr {
 
 /* VISIBITY-CLASSES-END */
 
+/* TOOLTIP */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/*style tooltip text and hide when not hovered over*/
+/*.tooltip .tooltiptext {
+	background-color: #222;
+	color: #FF9404;
+	font-size: 16px;
+	text-align: center;
+	border-radius: 6px;
+	padding: 10px 5px;
+	visibility: hidden;
+	width: 120px;
+	z-index: 10;
+	
+	position the tooltip
+	position: absolute;
+	top: 1px;
+}*/
+
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 90px;
+	background-color: #e2e9b3;
+	color: #222;
+	text-align: center;
+	/* border-radius: 2px; */
+	padding: 12px 4px 10px;
+	position: absolute;
+	z-index: 1;
+	font-size: 12px;
+	top: 75px;
+	/* overflow: visible; */
+	left: -30px;
+	/* border: 10px solid #222; */
+	border-radius: 4px;
+	transition: all .2s ease-in;
+	-webkit-transition: all .2s ease-in;
+	-moz-transition: all .2s ease-in;
+	-o-transition: all .2s ease-in;
+}
+
+/*make tooltip text visible on hover event*/
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* TOOLTIP-END */
+
 /* NAVBAR */
 
 .dropdown {
@@ -178,6 +231,7 @@ a.download-cv-icon {
 	font-size: 25px;
 	position: relative;
 	top: -5px;
+	padding: 24px 10px 16px;
 }
 
 /*make standard download link invisible on small screen sizes*/
@@ -202,7 +256,7 @@ a.download-cv-icon {
         top: 0;
         left: 0;
         background-color: #18181b;
-        overflow: hidden;
+        /*overflow: hidden;*/
         width: 100%;
         height: 60px;
     }
@@ -212,7 +266,7 @@ a.download-cv-icon {
         float: left;
         display: block;
         text-align: center;
-        padding: 24px 18px;
+        padding: 23px 18px;
         text-decoration: none;
         font-size: 14px;
     }
@@ -1604,8 +1658,26 @@ footer {
 
 #copyRight {
     color: #818786;
-    font-size: 14px;
+    font-size: 10px;
     text-align: center;
+}
+
+@media (min-width:351px) {
+    #copyRight {
+        /*color: #818786;*/
+        font-size: 12px;
+        /*text-align: center;*/
+    
+    }
+}
+
+@media (min-width:421px) {
+    #copyRight {
+        /*color: #818786;*/
+        font-size: 14px;
+        /*text-align: center;*/
+    
+    }
 }
 
 /*FOOTER-END*/

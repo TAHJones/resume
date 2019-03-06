@@ -57,17 +57,62 @@ hr {
     text-align: center;
 }
 
-.page-subtitle {
+.page-subtitle--contact {
     color: #ffcd37;
+    display: none;
+    font-size: 13px;
+    margin: 10px 0 20px;
+    /*text-align: left;*/
+}
+
+.page-subtitle--contact-small {
+    color: #ffcd37;
+    /*display: inline; */
     font-size: 18px;
-    margin: 10px 40px 60px;
+    margin-bottom: 20px;
     text-align: center;
+}
+
+/*@media (min-width:370px) {
+    .page-subtitle--contact {
+         color: #ffcd37; 
+        font-size: 14px;
+        margin: 10px 0 20px;
+         text-align: center; 
+    }
+}*/
+
+@media (min-width:421px) {
+    .page-subtitle--contact-small {
+        /*color: #ffcd37; */
+        font-size: 20px;
+        /*margin: 10px 0 20px;*/
+        /*text-align: center; */
+    }
+}
+
+@media (min-width:600px) {
+    .page-subtitle--contact {
+        /* color: #ffcd37; */
+        display: block;
+        font-size: 20px;
+        margin: 10px 0 40px;
+        text-align: center;
+    }
+
+    .page-subtitle--contact-small {
+        /*color: #ffcd37;*/
+        display: none;
+        /*font-size: 14px;*/
+        /*margin: 10px 0 20px;*/
+        /*text-align: center;*/
+    }
 }
 
 @media (min-width:768px) {
 
     p {
-        font-size: 16px;
+        font-size: 22px;
         line-height: 22px;
     }
 
@@ -77,8 +122,8 @@ hr {
         margin-bottom: 15px;
     }
 
-    .page-subtitle {
-        font-size: 20px;
+    .page-subtitle-contact {
+        font-size: 22px;
         margin: 10px 0 50px;
     }
 }
@@ -93,8 +138,8 @@ hr {
         font-size: 28px;
     }
 
-    .page-subtitle {
-        font-size: 25px;
+    .page-subtitle-contact {
+        font-size: 24px;
     }
 }
 
@@ -125,11 +170,12 @@ hr {
 /* TOOLTIP */
 
 .tooltip {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 /*style tooltip text and hide when not hovered over*/
+
 /*.tooltip .tooltiptext {
 	background-color: #222;
 	color: #FF9404;
@@ -147,30 +193,31 @@ hr {
 }*/
 
 .tooltip .tooltiptext {
-	visibility: hidden;
-	width: 90px;
-	background-color: #e2e9b3;
-	color: #222;
-	text-align: center;
-	/* border-radius: 2px; */
-	padding: 12px 4px 10px;
-	position: absolute;
-	z-index: 1;
-	font-size: 12px;
-	top: 75px;
-	/* overflow: visible; */
-	left: -30px;
-	/* border: 10px solid #222; */
-	border-radius: 4px;
-	transition: all .2s ease-in;
-	-webkit-transition: all .2s ease-in;
-	-moz-transition: all .2s ease-in;
-	-o-transition: all .2s ease-in;
+    visibility: hidden;
+    width: 90px;
+    background-color: #e2e9b3;
+    color: #222;
+    text-align: center;
+    /* border-radius: 2px; */
+    padding: 12px 4px 10px;
+    position: absolute;
+    z-index: 1;
+    font-size: 12px;
+    top: 75px;
+    /* overflow: visible; */
+    left: -30px;
+    /* border: 10px solid #222; */
+    border-radius: 4px;
+    transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
 }
 
 /*make tooltip text visible on hover event*/
+
 .tooltip:hover .tooltiptext {
-  visibility: visible;
+    visibility: visible;
 }
 
 /* TOOLTIP-END */
@@ -196,6 +243,7 @@ hr {
 }
 
 /*The "mobileMenu" class replaces "dropDownMenu" with JavaScript when the user clicks on the hamburger icon. This class makes the dropdown navbar look good on small screens, display the links vertically instead of horizontally*/
+
 .hamburgerIcon {
     background-color: #18181b;
     display: block;
@@ -225,31 +273,36 @@ hr {
     background-color: #222;
 }
 
-/*make download icon visible on small screen sizes, added anchor element to selector to override dropdownLink class*/ 
+/*make download icon visible on small screen sizes, added anchor element to selector to override dropdownLink class*/
+
 a.download-cv-icon {
-	display: block !important;
-	font-size: 25px;
-	position: relative;
-	top: -5px;
-	padding: 24px 10px 16px;
+    display: block !important;
+    font-size: 25px;
+    position: relative;
+    top: -5px;
+    padding: 24px 10px 16px;
 }
 
 /*make standard download link invisible on small screen sizes*/
+
 .download-cv {
     display: none !important;
 }
 
 /*make download icon invisible on dropdown menu*/
+
 .dropdownMobile .download-cv-icon {
     display: none !important;
 }
 
 /*make standard download link visible on dropdown menu*/
+
 .dropdownMobile .download-cv {
     display: block !important;
 }
 
 /* When the screen reaches 600px pixels wide, unhide all links. Add additional styles to last link. Remove hamburger icon. */
+
 @media (min-width:600px) {
     .dropdownMenu {
         position: relative;
@@ -277,17 +330,17 @@ a.download-cv-icon {
     }
 
     /*additional styles for contact link, added parent class to selector so style isn't applied to fixed menu*/
-    .dropdownMenu > .dropdownLink:last-child {
+    .dropdownMenu>.dropdownLink:last-child {
         float: right;
         background-color: #202020;
         color: #ff9f1e;
-        margin: 12px 10px;
+        margin: 11px 10px;
         padding: 10px;
         border: solid 2px transparent;
         border-radius: 4px;
     }
 
-    .dropdownLink:last-child:hover{
+    .dropdownLink:last-child:hover {
         background-color: #000;
         border: 2px solid #405A74;
         color: #FF4C04;
@@ -308,19 +361,19 @@ a.download-cv-icon {
     a.download-cv-icon {
         display: none !important;
     }
-    
+
     /*make standard download link visible on small screen sizes*/
     .download-cv {
         display: block !important;
     }
-    
+
     .dropdownLink {
-    	/*float: left;*/
-    	/*display: block;*/
-    	/*text-align: center;*/
-    	padding: 24px;
-    	/*text-decoration: none;*/
-    	/*font-size: 14px;*/
+        /*float: left;*/
+        /*display: block;*/
+        /*text-align: center;*/
+        padding: 23px;
+        /*text-decoration: none;*/
+        /*font-size: 14px;*/
     }
 }
 
@@ -329,6 +382,7 @@ a.download-cv-icon {
 /* FIXED-MENU */
 
 /*reposition and add border for fixed menu*/
+
 .fixedMenu {
     position: fixed;
     top: 50%;
@@ -342,7 +396,8 @@ a.download-cv-icon {
 }
 
 /*restyles links for fixed Menu*/
-.fixedMenu > a.dropdownLink {
+
+.fixedMenu>a.dropdownLink {
     display: block;
     text-align: left;
     padding-right: 25px;
@@ -354,7 +409,7 @@ a.download-cv-icon {
     width: 100%;
     z-index: 1;
     border: none;
-    border-radius: 0;   
+    border-radius: 0;
     color: #587da2;
     margin: 0;
     transition: all .25s ease-in-out;
@@ -364,6 +419,7 @@ a.download-cv-icon {
 }
 
 /*make fixed menu visible when hovering on border, change border color on hover */
+
 .fixedMenu:hover {
     right: 0;
     border-color: #333;
@@ -371,36 +427,41 @@ a.download-cv-icon {
 }
 
 /*had to add :not(:hover) to get transition effect when hover ends. adding transition to .fixedMenu class created strange transition effect then menu first appears*/
+
 .fixedMenu:not(:hover) {
     transition: right .9s ease-in-out;
 }
 
 /*removes transition effect when nabar link is clicked so fixed menu is initally hidden*/
+
 .noTransition {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -o-transition: none !important;
-  transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
 }
 
 /*initially hides fixed menu when nav bar link it clicked, is immediately replaced with noTransition class*/
+
 .hideFixedMenu {
     display: none !important;
 }
 
-.fixedMenu > a.dropdownLink:hover {
+.fixedMenu>a.dropdownLink:hover {
     background-color: #222;
     border: none;
     color: #ff9f1e;
 }
 
 /*make download icon invisible on fixed menu, added anchor element to selector to override dropdownLink class*/
-.fixedMenu > a.download-cv-icon {
+
+.fixedMenu>a.download-cv-icon {
     display: none !important;
 }
 
 /*make standard download link visible on fixed menu, added anchor element to selector to override dropdownLink class*/
-.fixedMenu > a.download-cv {
+
+.fixedMenu>a.download-cv {
     display: block !important;
 }
 
@@ -455,11 +516,11 @@ a.download-cv-icon {
     padding: 20px 0;
 }
 
-.address > h4,
-.contact-details > h4 {
-	margin: 8px 0;
-	font-size: 18px;
-	text-align: center;
+.address>h4,
+.contact-details>h4 {
+    margin: 8px 0;
+    font-size: 18px;
+    text-align: center;
 }
 
 .address>ul>li,
@@ -473,45 +534,45 @@ a.download-cv-icon {
 
 @media (min-width: 421px) {
     .bg-banner {
-    	/*color: #FFF;*/
-    	/*background-color: rgb(34, 49, 63);*/
-    	/* background-image: url(/resume/assets/img/bg.jpg); */
-    	/*background-image: url(../img/banner-image.jpg);*/
-    	/*background-repeat: no-repeat;*/
-    	/*background-position: center;*/
-    	/*background-size: cover;*/
-    	/*background-attachment: fixed;*/
-    	height: 1220px;
+        /*color: #FFF;*/
+        /*background-color: rgb(34, 49, 63);*/
+        /* background-image: url(/resume/assets/img/bg.jpg); */
+        /*background-image: url(../img/banner-image.jpg);*/
+        /*background-repeat: no-repeat;*/
+        /*background-position: center;*/
+        /*background-size: cover;*/
+        /*background-attachment: fixed;*/
+        height: 1220px;
     }
-    
+
     .bg-banner-inner {
-    	/*background-color: rgba(34, 49, 63, 0.5);*/
-    	padding-top: 140px;
-    	/* margin: 0 -30; */
+        /*background-color: rgba(34, 49, 63, 0.5);*/
+        padding-top: 140px;
+        /* margin: 0 -30; */
     }
-    
+
     .banner-title {
-    	/*color: #FF9404;*/
-    	/*position: relative;*/
-    	/*top: 0px;*/
-    	/*font-family: 'Cabin', sans-serif;*/
-    	font-size: 40px;
-    	/*text-shadow: 4px 4px 8px #000;*/
-    	/*max-width: 700px;*/
-    	/*margin: 0 auto 10px;*/
-    	/*text-align: center;*/
-    	/*text-transform: uppercase;*/
+        /*color: #FF9404;*/
+        /*position: relative;*/
+        /*top: 0px;*/
+        /*font-family: 'Cabin', sans-serif;*/
+        font-size: 40px;
+        /*text-shadow: 4px 4px 8px #000;*/
+        /*max-width: 700px;*/
+        /*margin: 0 auto 10px;*/
+        /*text-align: center;*/
+        /*text-transform: uppercase;*/
     }
-    
+
     .banner-subtitle {
-    	/*color: #ffcd37;*/
-    	/*font-family: 'Chakra Petch', sans-serif;*/
-    	font-size: 30px;
-    	/*text-shadow: 4px 4px 8px #000;*/
-    	/*margin: 30px 0 50px;*/
-    	/*text-align: center;*/
+        /*color: #ffcd37;*/
+        /*font-family: 'Chakra Petch', sans-serif;*/
+        font-size: 30px;
+        /*text-shadow: 4px 4px 8px #000;*/
+        /*margin: 30px 0 50px;*/
+        /*text-align: center;*/
     }
-    
+
     .contact-details-bg {
         /*background-color: rgba(0, 0, 0, .5);*/
         height: 800px;
@@ -525,32 +586,33 @@ a.download-cv-icon {
         font-size: 18px;
         text-align: center;
     }
-    .address > ul > li, .contact-details > ul > li {
-    	font-size: 11px;
-    	text-align: center;
-    	margin: 5px 0;
+    .address>ul>li,
+    .contact-details>ul>li {
+        font-size: 11px;
+        text-align: center;
+        margin: 5px 0;
     }
 }
 
 @media (min-width: 450px) {
     .bg-banner {
-    	/*color: #FFF;*/
-    	/*background-color: rgb(34, 49, 63);*/
-    	/* background-image: url(/resume/assets/img/bg.jpg); */
-    	/*background-image: url(../img/banner-image.jpg);*/
-    	/*background-repeat: no-repeat;*/
-    	/*background-position: center;*/
-    	/*background-size: cover;*/
-    	/*background-attachment: fixed;*/
-    	height: 1400px;
+        /*color: #FFF;*/
+        /*background-color: rgb(34, 49, 63);*/
+        /* background-image: url(/resume/assets/img/bg.jpg); */
+        /*background-image: url(../img/banner-image.jpg);*/
+        /*background-repeat: no-repeat;*/
+        /*background-position: center;*/
+        /*background-size: cover;*/
+        /*background-attachment: fixed;*/
+        height: 1400px;
     }
-    
+
     .bg-banner-inner {
-    	/*background-color: rgba(34, 49, 63, 0.5);*/
-    	padding-top: 160px;
-    	/* margin: 0 -30; */
+        /*background-color: rgba(34, 49, 63, 0.5);*/
+        padding-top: 160px;
+        /* margin: 0 -30; */
     }
-    
+
     .contact-details-bg {
         /*background-color: rgba(0, 0, 0, .5);*/
         height: 950px;
@@ -579,25 +641,35 @@ a.download-cv-icon {
     }
 }
 
+@media (min-width: 600px) {
+    .banner-title {
+        font-size: 45px;
+    }
+
+    .banner-subtitle {
+        font-size: 35px;
+    }
+}
+
 @media (min-width:768px) {
     .bg-banner {
-    	/*color: #FFF;*/
-    	/*background-color: rgb(34, 49, 63);*/
-    	/* background-image: url(/resume/assets/img/bg.jpg); */
-    	/*background-image: url(../img/banner-image.jpg);*/
-    	/*background-repeat: no-repeat;*/
-    	/*background-position: center;*/
-    	/*background-size: cover;*/
-    	/*background-attachment: fixed;*/
-    	height: 1450px;
+        /*color: #FFF;*/
+        /*background-color: rgb(34, 49, 63);*/
+        /* background-image: url(/resume/assets/img/bg.jpg); */
+        /*background-image: url(../img/banner-image.jpg);*/
+        /*background-repeat: no-repeat;*/
+        /*background-position: center;*/
+        /*background-size: cover;*/
+        /*background-attachment: fixed;*/
+        height: 1450px;
     }
-    
+
     .bg-banner-inner {
-    	/*background-color: rgba(34, 49, 63, 0.5);*/
-    	padding-top: 180px;
-    	/* margin: 0 -30; */
+        /*background-color: rgba(34, 49, 63, 0.5);*/
+        padding-top: 180px;
+        /* margin: 0 -30; */
     }
- 
+
     .contact-details-bg {
         /*background-color: rgba(0, 0, 0, .5);*/
         height: 950px;
@@ -713,7 +785,6 @@ a.download-cv-icon {
 
 /*DOWNLOAD-CV-END*/
 
-
 /* PROFESSIONAL-PROFILE */
 
 /*.profile-img {
@@ -761,7 +832,7 @@ a.download-cv-icon {
 @media (min-width: 410px) {
     .technical-skills>h5 {
         font-size: 16px;
-    }  
+    }
 }
 
 @media (min-width:768px) {
@@ -951,7 +1022,7 @@ a.download-cv-icon {
 
 /*CAREER*/
 
-.career > h4 {
+.career>h4 {
     color: #587da2;
     font-size: 12px;
     margin: 30px 0 15px 52px;
@@ -962,7 +1033,7 @@ ul.career-title {
     width: 100%;
 }
 
-ul.career-title > li{
+ul.career-title>li {
     color: #587da2;
     float: left;
     font-size: 12px;
@@ -974,21 +1045,22 @@ ul.career-title > li{
 }
 
 /*fix for career-list heading below 410px width*/
-@media (min-width: 410px) {
-    .career > h4 {
-        font-size: 14px;
-    }    
 
-    ul.career-title > li {
+@media (min-width: 410px) {
+    .career>h4 {
+        font-size: 14px;
+    }
+
+    ul.career-title>li {
         font-size: 14px;
     }
 }
 
-ul.career-title > li:nth-of-type(2) {
+ul.career-title>li:nth-of-type(2) {
     text-align: center;
 }
 
-ul.career-title > li:nth-of-type(3) {
+ul.career-title>li:nth-of-type(3) {
     text-align: right;
     padding-right: 0;
 }
@@ -999,7 +1071,7 @@ ul.career-list {
     margin: 0 auto;
 }
 
-ul.career-list > li {
+ul.career-list>li {
     text-align: left;
     color: #818786;
     font-size: 12px;
@@ -1009,25 +1081,28 @@ ul.career-list > li {
     left: 25px;
 }
 
-ul.career-list > li:before {
-    content: "\f005"; /*fontAwesome Unicode - fa-star*/
+ul.career-list>li:before {
+    content: "\f005";
+    /*fontAwesome Unicode - fa-star*/
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
-    color:#ffcd37;
+    color: #ffcd37;
     font-size: 14px;
     position: absolute;
     top: 0;
     left: -30px;
 }
 
-ul.responsiblities-list > li:before {
-    content: "\f0b1"; /*fontAwesome Unicode - fa-briefcase*/
+ul.responsiblities-list>li:before {
+    content: "\f0b1";
+    /*fontAwesome Unicode - fa-briefcase*/
     color: #7d5f2d;
 }
 
-ul.publications-list > li:before {
-    content: "\f02d"; /*fontAwesome Unicode - fa-book*/
+ul.publications-list>li:before {
+    content: "\f02d";
+    /*fontAwesome Unicode - fa-book*/
     color: #9bbb78;
 }
 
@@ -1036,44 +1111,44 @@ ul.publications-list > li:before {
 }
 
 @media (min-width: 768px) {
-    ul.career-title > li {
+    ul.career-title>li {
         font-size: 16px;
         padding-right: 5%;
     }
 
-    .career > h4 {
+    .career>h4 {
         font-size: 16px;
         margin: 40px 0 20px 60px;
     }
 
-    ul.career-list > li {
+    ul.career-list>li {
         font-size: 14px;
         left: 30px;
     }
 
-    ul.career-list > li:before {
+    ul.career-list>li:before {
         font-size: 16px;
         left: -35px;
     }
 }
 
 @media (min-width: 992px) {
-    ul.career-title > li {
+    ul.career-title>li {
         font-size: 18px;
         padding-right: 5%;
     }
 
-    .career > h4 {
+    .career>h4 {
         font-size: 18px;
         margin: 40px 0 20px 60px;
     }
 
-    ul.career-list > li {
+    ul.career-list>li {
         font-size: 16px;
         left: 30px;
     }
 
-    ul.career-list > li:before {
+    ul.career-list>li:before {
         font-size: 18px;
         left: -35px;
     }
@@ -1084,6 +1159,7 @@ ul.publications-list > li:before {
 /* GOOGLE-MAPS */
 
 /*make map visible and center on page*/
+
 #map {
     /*overflow: hidden !important;*/
     height: 400px;
@@ -1096,102 +1172,102 @@ ul.publications-list > li:before {
 /* GITHUB */
 
 .github-form {
-	position: relative;
-	top: 30px;
-	left: 0;
-	margin-top: 5px;
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
-	height: 440px;
+    position: relative;
+    top: 30px;
+    left: 0;
+    margin-top: 5px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 440px;
 }
 
-.github-form > h4 {
+.github-form>h4 {
     display: none;
 }
 
 #githubLink {
-	font-size: 18px;
+    font-size: 18px;
 }
 
 #githubUserName {
-	/*position: relative;*/
-	/*left: 50px;*/
-	/*top: 50%;*/
-	/*transform: translateY(-50%);*/
-	/*vertical-align: middle;*/
-	/*display: inline-block;*/
-	margin-bottom: 10px;
-	width: 88%;
+    /*position: relative;*/
+    /*left: 50px;*/
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
+    /*vertical-align: middle;*/
+    /*display: inline-block;*/
+    margin-bottom: 10px;
+    width: 88%;
 }
 
 .github-info {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -115%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -115%);
 }
 
-.github-info > label {
-	display: block;
-	max-width: 100%;
-	margin-bottom: 10px;
-	font-weight: 700;
-	color: #405a74;
-	font-size: 12px;
-	font-style: italic;
+.github-info>label {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #405a74;
+    font-size: 12px;
+    font-style: italic;
 }
 
 #githubUserImg {
     display: none;
-	/*position: absolute;*/
-	/*top: 50%;*/
-	/*left: 50%;*/
-	/*transform: translate(-113%, -50%);*/
+    /*position: absolute;*/
+    /*top: 50%;*/
+    /*left: 50%;*/
+    /*transform: translate(-113%, -50%);*/
 }
 
 .github-avatar {
-	width: 140px;
-	height: 140px;
-	border: 4px solid #405a74;
-	border-radius: 12px;
+    width: 140px;
+    height: 140px;
+    border: 4px solid #405a74;
+    border-radius: 12px;
 }
 
 /*#githubUserData > h2 {
 	color: #99b4b0;
 }*/
 
-#githubUserData > h2 {
-	color: #99b4b0;
-	font-size: 14px;
-	padding: 10px 0;
+#githubUserData>h2 {
+    color: #99b4b0;
+    font-size: 14px;
+    padding: 10px 0;
 }
 
-.gh-content > p {
-	color: #99b4b0;
-	font-style: italic;
-	font-size: 14px;
+.gh-content>p {
+    color: #99b4b0;
+    font-style: italic;
+    font-size: 14px;
 }
 
-#loader > img {
-	width: 50px;
-	position: relative;
-	top: 20px;
-	left: 10px;
+#loader>img {
+    width: 50px;
+    position: relative;
+    top: 20px;
+    left: 10px;
 }
 
 #githubRepoData {
-	position: relative;
-	top: 180px;
-	width: 100%;
-	height: 240px;
-	background-color: none; 
-	overflow: hidden;
+    position: relative;
+    top: 180px;
+    width: 100%;
+    height: 240px;
+    background-color: none;
+    overflow: hidden;
 }
 
 .small-name {
-  font-size: 16px;
-  color: #a9a9a9;
-  font-style: italic;
+    font-size: 16px;
+    color: #a9a9a9;
+    font-style: italic;
 }
 
 /*.avi {
@@ -1206,55 +1282,55 @@ ul.publications-list > li:before {
 }*/
 
 .repo-list {
-	position: absolute;
-	margin: 0 auto;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	width: 95%;
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
 }
 
-.repo-list > p {
-	font-size: 12px;
-	/*font-weight: bold;*/
-	margin-left: 10px;
-	display: inline-block;
-	margin-bottom: 8px;
+.repo-list>p {
+    font-size: 12px;
+    /*font-weight: bold;*/
+    margin-left: 10px;
+    display: inline-block;
+    margin-bottom: 8px;
 }
 
 .repo-list ul {
-  font-size: 1.2em;
+    font-size: 1.2em;
 }
 
 .repo-list ul li {
-  display: block;
+    display: block;
 }
 
 .repo-list ul li a {
-	font-weight: bold;
-	font-size: 10px;
-	padding: 5px 4px;
-	display: block;
-	float: left;
-	margin-left: 10px;
-	margin-bottom: 8px;
-	text-decoration: none;
-	border: 2px solid #202020;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-	color: #ff9f1e;
-	background-color: #202020;
-	/* background-image: -webkit-gradient(linear, left top, left bottom, from(#5597d8), to(#3673af)); */
-	/* background-image: -webkit-linear-gradient(top, #5597d8, #3673af); */
-	/* background-image: -moz-linear-gradient(top, #5597d8, #3673af); */
-	/* background-image: -ms-linear-gradient(top, #5597d8, #3673af); */
-	/* background-image: -o-linear-gradient(top, #5597d8, #3673af); */
-	/* background-image: linear-gradient(top, #5597d8, #3673af); */
-	transition: all .25s ease-in-out;
-	-webkit-transition: all .25s ease-in-out;
-	-moz-transition: all .25s ease-in-out;
-	-o-transition: all .25s ease-in-out;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 5px 4px;
+    display: block;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    border: 2px solid #202020;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    color: #ff9f1e;
+    background-color: #202020;
+    /* background-image: -webkit-gradient(linear, left top, left bottom, from(#5597d8), to(#3673af)); */
+    /* background-image: -webkit-linear-gradient(top, #5597d8, #3673af); */
+    /* background-image: -moz-linear-gradient(top, #5597d8, #3673af); */
+    /* background-image: -ms-linear-gradient(top, #5597d8, #3673af); */
+    /* background-image: -o-linear-gradient(top, #5597d8, #3673af); */
+    /* background-image: linear-gradient(top, #5597d8, #3673af); */
+    transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
 }
 
 .repo-list ul li a:hover {
@@ -1270,14 +1346,14 @@ ul.publications-list > li:before {
 }
 
 .repo-list ul li a:active {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.25);
 }
 
 .repo-list ul li a span {
-  font-family: "Courier New", Courier, "Lucida Typewriter", monospace;
-  font-size: 0.9em;
+    font-family: "Courier New", Courier, "Lucida Typewriter", monospace;
+    font-size: 0.9em;
 }
 
 /*@media (min-width:351px) {
@@ -1292,35 +1368,36 @@ ul.publications-list > li:before {
 
 @media (min-width:421px) {
     .github-form {
-    	/*position: relative;*/
-    	/*top: 30px;*/
-    	/*left: 0;*/
-    	/*margin-top: 5px;*/
-    	/*width: 100%;*/
-    	/*background-color: rgba(0, 0, 0, 0.5);*/
-    	height: 420px;
+        /*position: relative;*/
+        /*top: 30px;*/
+        /*left: 0;*/
+        /*margin-top: 5px;*/
+        /*width: 100%;*/
+        /*background-color: rgba(0, 0, 0, 0.5);*/
+        height: 420px;
     }
 
     #githubRepoData {
-    	/*position: relative;*/
-    	top: 220px;
-    	/*width: 100%;*/
-    	height: 200px;
-    	background-color: #000;
-    	/*overflow: hidden;*/
+        /*position: relative;*/
+        top: 220px;
+        /*width: 100%;*/
+        height: 200px;
+        background-color: #000;
+        /*overflow: hidden;*/
     }
 }
 
 /*styles for screens 450px and above*/
+
 @media (min-width:450px) {
     .github-form {
-    	/*position: relative;*/
-    	/*top: 30px;*/
-    	/*left: 0;*/
-    	/*margin-top: 5px;*/
-    	/*width: 100%;*/
-    	/*background-color: rgba(0, 0, 0, 0.5);*/
-    	height: 350px;
+        /*position: relative;*/
+        /*top: 30px;*/
+        /*left: 0;*/
+        /*margin-top: 5px;*/
+        /*width: 100%;*/
+        /*background-color: rgba(0, 0, 0, 0.5);*/
+        height: 350px;
     }
 
     #githubUserImg {
@@ -1330,120 +1407,112 @@ ul.publications-list > li:before {
         left: 50%;
         transform: translate(-120%, -45%);
     }
-    
+
     .github-info {
-    	/*position: absolute;*/
-    	/*top: 50%;*/
-    	/*left: 50%;*/
-    	transform: translate(5%, -45%);
+        /*position: absolute;*/
+        /*top: 50%;*/
+        /*left: 50%;*/
+        transform: translate(5%, -45%);
     }
-    
-    .github-form > h4 {
+
+    .github-form>h4 {
         display: block;
-    	font-size: 20px;
-    	text-align: center;
-    	padding: 45px 0 35px;
-	}
-	
-	.github-info > label {
-    	/*display: block;*/
-    	/*max-width: 100%;*/
-    	/*margin-bottom: 10px;*/
-    	/*font-weight: 700;*/
-    	/*color: #405a74;*/
-    	font-size: 14px;
-    	/*font-style: italic;*/
+        font-size: 20px;
+        text-align: center;
+        padding: 45px 0 35px;
     }
-	
-	#githubUserData > h2 {
-    	/*color: #99b4b0;*/
-    	font-size: 18px;
-    	/*padding: 10px 5px;*/
+
+    .github-info>label {
+        /*display: block;*/
+        /*max-width: 100%;*/
+        /*margin-bottom: 10px;*/
+        /*font-weight: 700;*/
+        /*color: #405a74;*/
+        font-size: 14px;
+        /*font-style: italic;*/
     }
-    
-    .repo-list > p {
-    	font-size: 14px;
-    	font-weight: bold;
-    	margin-left: 12px;
-    	display: inline-block;
-    	margin-bottom: 10px;
+
+    #githubUserData>h2 {
+        /*color: #99b4b0;*/
+        font-size: 18px;
+        /*padding: 10px 5px;*/
     }
-    
+
+    .repo-list>p {
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 12px;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
     #githubRepoData {
-    	/*position: relative;*/
-    	top: 200px;
-    	/*width: 100%;*/
-    	height: 240px;
-    	/*background-color: #000;*/
-    	/*overflow: hidden;*/
+        /*position: relative;*/
+        top: 200px;
+        /*width: 100%;*/
+        height: 240px;
+        /*background-color: #000;*/
+        /*overflow: hidden;*/
     }
 
     .repo-list ul li a {
-      /*font-weight: bold;*/
-         font-size: 12px;
-         padding: 4px 6px;
-      /*display: block;*/
-      /*float: left;*/
-         margin-left: 12px;
-         margin-bottom: 10px;
-      /*text-decoration: none;*/
-      /*border: 2px solid #202020;*/
-      /*-webkit-border-radius: 2px;*/
-      /*-moz-border-radius: 2px;*/
-      /*border-radius: 2px;*/
-      /*color: #ff9f1e;*/
-      /*background-color: #202020;*/
-      /*background-image: -webkit-gradient(linear, left top, left bottom, from(#5597d8), to(#3673af));*/
-      /*background-image: -webkit-linear-gradient(top, #5597d8, #3673af);*/
-      /*background-image: -moz-linear-gradient(top, #5597d8, #3673af);*/
-      /*background-image: -ms-linear-gradient(top, #5597d8, #3673af);*/
-      /*background-image: -o-linear-gradient(top, #5597d8, #3673af);*/
-      /*background-image: linear-gradient(top, #5597d8, #3673af);*/
-        /*transition: all .25s ease-in-out;*/
-        /*-webkit-transition: all .25s ease-in-out;*/
-        /*-moz-transition: all .25s ease-in-out;*/
-        /*-o-transition: all .25s ease-in-out;*/
+        /*font-weight: bold;*/
+        font-size: 12px;
+        padding: 4px 6px;
+        /*display: block;*/
+        /*float: left;*/
+        margin-left: 12px;
+        margin-bottom: 10px;
+        /*text-decoration: none;*/
+        /*border: 2px solid #202020;*/
+        /*-webkit-border-radius: 2px;*/
+        /*-moz-border-radius: 2px;*/
+        /*border-radius: 2px;*/
+        /*color: #ff9f1e;*/
+        /*background-color: #202020;*/
     }
-    
+
 }
 
 /*styles for screens 570px and above*/
+
 @media (min-width:570px) {
     #githubRepoData {
-    	/* position: relative; */
-    	/*top: 200px;*/
-    	/* width: 100%; */
-    	height: 210px;
-    	/* background-color: #000; */
-    	/* overflow: hidden; */
+        /* position: relative; */
+        /*top: 200px;*/
+        /* width: 100%; */
+        height: 210px;
+        /* background-color: #000; */
+        /* overflow: hidden; */
     }
 }
 
 /*styles for screens 768px and above*/
+
 @media (min-width:768px) {
     .github-form {
-    	/*position: relative;*/
-    	/*top: 25px;*/
-    	/*left: 0;*/
-    	/*margin-top: 40px;*/
-    	/*width: 100%;*/
-    	/*background-color: rgba(0, 0, 0, 0.5);*/
-    	/*height: 330px;*/
+        /*position: relative;*/
+        /*top: 25px;*/
+        /*left: 0;*/
+        /*margin-top: 40px;*/
+        /*width: 100%;*/
+        /*background-color: rgba(0, 0, 0, 0.5);*/
+        /*height: 330px;*/
     }
-    .github-form > h4 {
-    	/*display: block;*/
-    	font-size: 22px;
-    	/*text-align: center;*/
-    	padding: 40px 0;
+    .github-form>h4 {
+        /*display: block;*/
+        font-size: 22px;
+        /*text-align: center;*/
+        padding: 40px 0;
     }
-    
+
     #githubRepoData {
-    	/*position: relative;*/
-    	top: 248px;
-    	/*width: 100%;*/
-    	height: 220px;
-    	/*background-color: #000;*/
-    	/*overflow: hidden;*/
+        /*position: relative;*/
+        top: 248px;
+        /*width: 100%;*/
+        height: 220px;
+        /*background-color: #000;*/
+        /*overflow: hidden;*/
     }
 
     #githubUserImg {
@@ -1459,12 +1528,12 @@ ul.publications-list > li:before {
         /*border: 4px solid #405a74;*/
         /*border-radius: 12px;*/
     }
-    
+
     .github-info {
-    	/*position: absolute;*/
-    	/*top: 50%;*/
-    	/*left: 50%;*/
-    	transform: translate(12%, -34%);
+        /*position: absolute;*/
+        /*top: 50%;*/
+        /*left: 50%;*/
+        transform: translate(12%, -34%);
     }
 
     .github-info>label {
@@ -1484,62 +1553,112 @@ ul.publications-list > li:before {
     }
 
     .small-name {
-      font-size: 18px;
-      /*color: #a9a9a9;*/
-      /*font-style: italic;*/
+        font-size: 18px;
+        /*color: #a9a9a9;*/
+        /*font-style: italic;*/
     }
 
-    .gh-content > p {
-    	/*color: #99b4b0;*/
-    	/*font-style: italic;*/
-    	font-size: 16px;
+    .gh-content>p {
+        /*color: #99b4b0;*/
+        /*font-style: italic;*/
+        font-size: 16px;
+    }
+
+    .repo-list>p {
+        font-size: 15px;
+        /*font-weight: bold;*/
+        /*margin-left: 12px;*/
+        /*display: inline-block;*/
+        /*margin-bottom: 12px;*/
+    }
+
+    .repo-list ul li a {
+        /*font-weight: bold;*/
+        font-size: 13px;
+        padding: 6px 8px;
+        /*display: block;*/
+        /*float: left;*/
+        /*margin-left: 12px;*/
+        /*margin-bottom: 10px;*/
+        /*text-decoration: none;*/
+        /*border: 2px solid #202020;*/
+        /*-webkit-border-radius: 2px;*/
+        /*-moz-border-radius: 2px;*/
+        /*border-radius: 2px;*/
+        /*color: #ff9f1e;*/
+        /*background-color: #202020;*/
     }
 }
 
 /*styles for screens 992px and above*/
+
 @media (min-width:992px) {
     .github-form {
-    	/*position: relative;*/
-    	/*top: 25px;*/
-    	/*left: 0;*/
-    	/*margin-top: 40px;*/
-    	/*width: 100%;*/
-    	/*background-color: rgba(0, 0, 0, 0.5);*/
-    	height: 360px;
+        /*position: relative;*/
+        /*top: 25px;*/
+        /*left: 0;*/
+        /*margin-top: 40px;*/
+        /*width: 100%;*/
+        /*background-color: rgba(0, 0, 0, 0.5);*/
+        height: 360px;
     }
 
-    .github-form > h4 {
-    	/*display: block;*/
-    	font-size: 26px;
-    	/*text-align: center;*/
-    	/*padding: 30px 0 50px;*/
+    .github-form>h4 {
+        /*display: block;*/
+        font-size: 26px;
+        /*text-align: center;*/
+        /*padding: 30px 0 50px;*/
     }
-    
+
     #githubLink {
-    	font-size: 20px;
-    }
-    
-    #githubUserImg {
-    	/* display: block; */
-    	/* position: absolute; */
-    	/* top: 50%; */
-    	/* left: 50%; */
-    	transform: translate(-120%, -42%);
-    }
- 
-    .github-info {
-    	/*position: absolute;*/
-    	/*top: 50%;*/
-    	/*left: 50%;*/
-    	transform: translate(12%, -42%);
+        font-size: 20px;
     }
 
-    #githubUserData > h2 {
-    	/* color: #99b4b0; */
-    	font-size: 22px;
-    	/* padding: 10px 5px; */
+    #githubUserImg {
+        /* display: block; */
+        /* position: absolute; */
+        /* top: 50%; */
+        /* left: 50%; */
+        transform: translate(-120%, -42%);
     }
-    
+
+    .github-info {
+        /*position: absolute;*/
+        /*top: 50%;*/
+        /*left: 50%;*/
+        transform: translate(12%, -42%);
+    }
+
+    #githubUserData>h2 {
+        /* color: #99b4b0; */
+        font-size: 22px;
+        /* padding: 10px 5px; */
+    }
+
+    .repo-list>p {
+        font-size: 16px;
+        /*font-weight: bold;*/
+        /*margin-left: 12px;*/
+        /*display: inline-block;*/
+        margin-bottom: 12px;
+    }
+
+    .repo-list ul li a {
+        /*font-weight: bold;*/
+        font-size: 14px;
+        padding: 8px 10px;
+        /*display: block;*/
+        /*float: left;*/
+        /*margin-left: 12px;*/
+        /*margin-bottom: 10px;*/
+        /*text-decoration: none;*/
+        /*border: 2px solid #202020;*/
+        /*-webkit-border-radius: 2px;*/
+        /*-moz-border-radius: 2px;*/
+        /*border-radius: 2px;*/
+        /*color: #ff9f1e;*/
+        /*background-color: #202020;*/
+    }
 }
 
 /* GITHUB-END */
@@ -1573,7 +1692,7 @@ label {
     background-color: #b3aea0;
     border: 4px solid #bbb;
     border-radius: 4px;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
     font-weight: bold;
 }
 
@@ -1587,6 +1706,7 @@ label {
 }
 
 /*remove orange background color when not in focus*/
+
 .form-input:not(:focus) {
     color: #222;
     transition: all .75s ease-in-out;
@@ -1602,20 +1722,20 @@ label {
 
 input.form-input {
     height: 30px;
-    width: 85%;
+    width: 90%;
     display: block;
 }
 
 textarea.form-input {
     height: 200px;
-    width: 85%;
+    width: 90%;
     display: block;
 }
 
 @media (min-width:410px) {
     input.form-input,
     textarea.form-input {
-        width: 95%
+        width: 92%
     }
 }
 
@@ -1627,7 +1747,8 @@ textarea.form-input {
     cursor: pointer;
 }
 
-.btn-submit, .btn-reset {
+.btn-submit,
+.btn-reset {
     background-color: #202020;
     color: #ff9f1e;
     font-size: 14px;
@@ -1637,7 +1758,8 @@ textarea.form-input {
     margin-right: 12px;
 }
 
-.btn-submit:hover, .btn-reset:hover {
+.btn-submit:hover,
+.btn-reset:hover {
     background-color: #000;
     border: 2px solid #405A74;
     color: #FF4C04;
@@ -1667,7 +1789,6 @@ footer {
         /*color: #818786;*/
         font-size: 12px;
         /*text-align: center;*/
-    
     }
 }
 
@@ -1676,7 +1797,6 @@ footer {
         /*color: #818786;*/
         font-size: 14px;
         /*text-align: center;*/
-    
     }
 }
 

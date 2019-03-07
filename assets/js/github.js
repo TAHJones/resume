@@ -5,9 +5,9 @@ Client Secret
 c49aff84b80e852010d3db77a67d36e9657ccb35*/
 
 function githubLink(user) {
-    return `https://github.com/${user.name}`;
+    return `Github: <a href="https://github.com/${user.login}" target="_blank">https://github.com/${user.login}</a>`;
 }
-
+ 
 function userImgHTML(user) {
     return `<div class="gh-avatar">
         <a href="${user.html_url}" target="_blank">

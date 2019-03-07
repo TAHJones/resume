@@ -55,7 +55,6 @@ window.addEventListener("scroll", scrollingMenu, false);
 dropdownMenu.addEventListener("click", function(e) {
   if (e.target.className === "dropdownLink") {
     dropdownMenu.className = "hideFixedMenu";
-    console.log(e.target.className);       
   }
 }, false);
 

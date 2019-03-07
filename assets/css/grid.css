@@ -61,12 +61,15 @@ table {
   margin: 0px;
 }
 
+.clearfix:before,
+.clearfix:after, 
 .row:before,
 .row:after {
   content: "";
   display: table;
 }
 
+.clearfix,
 .row:after {
     clear: both;
 }

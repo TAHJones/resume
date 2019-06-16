@@ -1,9 +1,3 @@
-/*Github API account information:
-Client ID
-8a05f7492e0c0d6c92e2
-Client Secret
-c49aff84b80e852010d3db77a67d36e9657ccb35*/
-
 function githubLink(user) {
     return `Github: <a href="https://github.com/${user.login}" target="_blank">https://github.com/${user.login}</a>`;
 }

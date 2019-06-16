@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Resume of Thomas Jones. Web Developer in Reigate & South London">
+  <meta name="author" content="Thomas Jones">
+  <title>Thomas Jones | Resume</title>
+  <link href="assets/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin|Chakra+Petch|Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/grid.css" type="text/css" />
+  <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
+  <link rel="shortcut icon" href="assets/img/flavicon.png">
+  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("user_6NRsN7acuhPl2ZkEJuF66");
+    })();
+  </script>
+</head>
+
+<body>
+  <header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="dropdown">
+
+        <div class="dropdownMenu" id="dropdownMenuId">
+          <a href="index.html#profile" class="dropdownLink">Profile</a>
+          <a href="index.html#skills" class="dropdownLink">Skills</a>
+          <a href="index.html#portfolio" class="dropdownLink">Portfolio</a>
+          <a href="index.html#qualifications" class="dropdownLink">Qualifications</a>
+          <a href="index.html#career" class="dropdownLink">Career</a>
+          <a href="assets/cv/Thomas-Jones-CV-2019.pdf" target="_blank" class="dropdownLink download-cv">Download CV</a>
+          <a href="assets/cv/Thomas-Jones-CV-2019.pdf" target="_blank" class="dropdownLink download-cv-icon tooltip"><i class="fa fa-download" aria-hidden="true"><span class="tooltiptext">Download CV</span></i></a>
+          <a href="index.html#contact" class="dropdownLink">Contact</a>
+        </div>
+
+        <div class="hamburgerIcon">
+          <a id="hamburgeIconId"><i class="fa fa-bars fa-2x"></i></a>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVBAR-END -->
+
+    <!-- BANNER -->
+    <div class="bg-banner" id="home">
+      <div class="bg-banner-inner">
+        <div class="row">
+          <div class="col-collapse col-xs-12">
+            <h1 class="banner-title">Thomas Jones</h1>
+            <h2 class="banner-subtitle">Full Stack Webdeveloper</h2>
+
+            <!-- CONTACT-DETAILS -->
+            <div class="contact-details-bg">
+              <div class="row">
+                
+                <div class="col col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-2">
+                  <div class="address">
+                    <h4>Address</h4>
+                    <ul>
+                      <li>6 Stuart Crescent</li>
+                      <li>Reigate</li>
+                      <!--<li>Surrey</li>-->
+                      <li>RH2 8EB</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col col-xs-6 col-xs-offset-3 col-sm-5 col-sm-offset-1">
+                  <div class="contact-details">
+                    <h4>Contact Details</h4>
+                    <ul>
+                      <li>Phone: 07585896343</li>
+                      <li>Email: tahjones75@gmail.com</li>
+                      <li><a href="https://www.linkedin.com/in/tahjones" target="_blank">https://www.linkedin.com/in/tahjones</a></li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <!-- GITHUB -->
+                <div class="row">
+                  <div class="col-collapse col-xs-12 col-sm-10 col-sm-offset-1">
+
+                      <div class="github-form">
+                      <h4 id="githubLink"></h4>
+                        <div id="githubUserImg"></div>
+                        <div class="github-info">
+                          <label for="githubUserName">Enter Github Username...</label>
+                          <input type="text" id="githubUserName" value="TAHJones" oninput="fetchGithubInfo()" />
+                          <div id="githubUserData"></div>
+                        </div>
+                      <div id="githubRepoData"></div>
+                      </div>
+                      
+                  </div>
+                </div>
+                <!-- GITHUB-END -->
+                
+              </div>
+            </div>
+            <!-- CONTACT-DETAILS-END -->
+            
+            <!--<div class="github-profile-bg">
+              <div class="row">
+                <div class="col col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+                  <section>
+                   <div class="github-form">
+                      <div id="githubUserImg"></div>
+                      <div class="github-info">
+                        <input type="text" id="githubUserName" value="octocat" oninput="fetchGithubInfo()" />
+                        <div id="githubUserData"></div>
+                      </div>
+                    <div id="githubRepoData"></div>
+                    </div>
+                 </section>
+                </div>
+              </div>
+            </div>-->
+            <!-- GITHUB-END -->
+
+            <!--DOWNLOAD-CV-->
+            <!--<div class="download-cv-bg">
+              <div class="row">
+                <div class="col col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+                  <a href="assets/cv/Thomas-Jones-CV-2019.pdf" target="_blank" class="download-cv">Download CV</a>
+                </div>
+              </div>
+            </div>-->
+            <!--DOWNLOAD-CV-END-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--BANNER-END -->
+  </header>
+
+  <!--PROFESSIONAL-PROFILE-->
+  <section class="bg-profile" id="profile">
+
+    <div class="row">
+      <div class="col col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2">
+        <div class="profile">
+          <h3 class="page-title">Professional Profile</h3>
+          <hr>
+          <p>An enthusiastic and dedicated web developer who enjoys using modern design and coding techniques to build mobile friendly (responsive) websites. Quick to assimilate new skills and technologies whilst demonstrating a logical and analytical approach
+            to solving complex technical problems. Enjoys working as part of a successful and productive team but can operate well on own initiative and has the ability to perform effectively whilst working under pressure. Possesses excellent interpersonal
+            skills and the ability to communicate concisely and articulately with colleagues.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!--PROFESSIONAL-PROFILE-END-->
+
+  <!--OBJECTIVE-->
+  <section class="bg-about" id="objective">
+
+    <div class="row">
+      <div class="col col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2">
+        <div class="objective">
+          <h3 class="page-title">Objective</h3>
+          <hr>
+          <p>Experienced healthcare scientist working for the NHS, retrained and ready for career change. Currently looking for a new and challenging role as a front-end web developer, one which will allow for further professional development and makes best
+            use of existing skills and experience.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!--OBJECTIVE-END-->
+
+  <!--TECHNICAL-SKILLS-->
+  <section class="bg-technical-skills" id="skills">
+
+    <div class="row">
+      <div class="col col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+        <h3 class="page-title">Technical Skills</h3>
+        <hr>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-xs-5 col-xs-offset-1 col-sm-5 col-sm-offset-1">
+        <div class="technical-skills">
+          <h5>HTML5</h5>
+          <img src="assets/img/html5.png" alt="HTML5 logo">
+        </div>
+      </div>
+      <div class="col col-xs-5 col-xs-offset-0 col-sm-5 col-sm-offset-0">
+        <div class="technical-skills">
+          <h5>CSS3</h5>
+          <img src="assets/img/CSS3.png" alt="CSS3 logo">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-xs-5 col-xs-offset-1 col-sm-5 col-sm-offset-1">
+        <div class="technical-skills">
+          <h5>Javascript</h5>
+          <img src="assets/img/javascript.png" alt="Javascript logo">
+        </div>
+      </div>
+      <div class="col col-xs-5 col-xs-offset-0 col-sm-5 col-sm-offset-0">
+        <div class="technical-skills">
+          <h5>jQuery</h5>
+          <img class="square-img" src="assets/img/jquery.png" alt="jQuery logo">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-xs-5 col-xs-offset-1 col-sm-5 col-sm-offset-1">
+        <div class="technical-skills">
+          <h5>SCSS</h5>
+          <img class="square-img" src="assets/img/scss.png" alt="SCSS logo">
+        </div>
+      </div>
+      <div class="col col-xs-5 col-xs-offset-0 col-sm-5 col-sm-offset-0">
+        <div class="technical-skills">
+          <h5>Responsive Design</h5>
+          <img class="square-img" src="assets/img/responsive-icon.png" alt="responsive webdesign logo">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-xs-5 col-xs-offset-1 col-sm-5 col-sm-offset-1">
+        <div class="technical-skills">
+          <h5>Foundation 5 & 6</h5>
+          <img class="square-img" src="assets/img/foundation.jpg" alt="Zurb Foundation logo">
+        </div>
+      </div>
+      <div class="col col-xs-5 col-xs-offset-0 col-sm-5 col-sm-offset-0">
+        <div class="technical-skills">
+          <h5>Bootstrap 3</h5>
+          <img src="assets/img/bootstrap.png" alt="Bootstrap logo">
+        </div>
+      </div>
+    </div>
+
+    <!--<div class="row">
+      <div class="col col-xs-5 col-xs-offset-1 col-sm-5 col-sm-offset-1">
+        <div class="technical-skills">
+          <h5>Slim - PHP</h5>
+          <img class="square-img" src="assets/img/slim.jpg" alt="Slim PPHP framework logo">
+        </div>
+      </div>
+      <div class="col col-xs-5 col-xs-offset-0 col-sm-5 col-sm-offset-0">
+        <div class="technical-skills">
+          <h5>Twig - PHP</h5>
+          <img class="square-img" src="assets/img/twig.png" alt="Twig PHP template engine logo">
+        </div>
+      </div>
+    </div>-->
+
+  </section>
+  <!--TECHNICAL-SKILLS-END-->
+
+  <!--DEVELOPER-TOOLS-->
+  <section class="bg-developer-tools" id="tools">
+    <div class="row">
+      <div class="col col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2">
+        <h3 class="page-title">Developer Tools</h3>
+        <hr>
+        <div class="developer-tools">
+          <ul>
+            <li><span>Text Editor: </span>Sublime Text + Package Control, Emmett, Origami, SublimeLinter</li>
+            <li><span>Operating Systems: </span>Windows 8.1-10, Linux Mint 17-18, Ubuntu 16-18</li>
+            <li><span>Virtual Machines: </span>Vmware, Virtualbox, Cloud9</li>
+            <li><span>CLI: </span>Basic command lines & BASH shell scripting</li>
+            <li><span>Version Control: </span>GIT, Github</li>
+            <li><span>Webhosting: </span>iPage, 123-Reg, TSO Hosting, Github Pages</li>
+            <li><span>Localserver: </span>Xampp, PHP Built-In Server, Sublime Server, Browser Sync</li>
+            <li><span>FTP: </span>Filezilla, FireFTP, Sublime FTP</li>
+            <li><span>Dependency & Package Managers: </span>NPM, Composer, Bower, Compass</li>
+            <li><span>Design & Image Editing: </span>GIMP - Image editing & enhancement, logo design</li>
+            <li><span>Data Visualisation: </span>D3, DC & Crossfilter</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!--DEVELOPER-TOOLS-END-->
+
+  <!--ONLINE-MARKETING-->
+  <section>
+
+    <div class="row">
+      <div class="col col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2">
+        <h3 class="page-title">Online Marketing</h3>
+        <hr>
+        <div class="online-marketing">
+          <ul>
+            <li><span>Basic SEO: </span>Including Meta data & Keyword placement, Backlinks, 301 redirect, XML Sitemap</li>
+            <!--<li><span>Pay Per Click Campaigns: </span>Experience using Google Adwords</li>-->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!--ONLINE-MARKETING-END-->
+
+  <!-- PORTFOLIO -->
+  <section class="bg-portfolio" id="portfolio">
+
+    <div class="row">
+      <div class="col col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+        <h3 class="page-title">Portfolio</h3>
+        <hr>
+      </div>
+    </div>
+
+    <div class="row row-portfolio">
+      <div class="col col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1">
+        <a href="https://tahjones.github.io/alessiajones/" target="_blank">
+          <div class="overlay-container-1">
+            <img class="portfolio-img" src="assets/img/alessiajones.png" alt="website 1 - alessiajones.com">
+            <div class="overlay">
+              <div class="overlay-text">Visit Site</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0">
+        <a href="https://tahjones.github.io/elements-of-healing/" target="_blank">
+          <div class="overlay-container-2">
+            <img class="portfolio-img" src="assets/img/elementsofhealing.png" alt="website 2 - elementsofhealing.co.uk">
+            <div class="overlay">
+              <div class="overlay-text">Visit Site</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="row row-portfolio">
+      <div class="col col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1">
+        <a href="https://tahjones.github.io/mum-and-baby-gifts/" target="_blank">
+          <div class="overlay-container-3">
+            <img class="portfolio-img" src="assets/img/mumandbabygifts.png" alt="website 3 - mumandbabygifts.com">
+            <div class="overlay">
+              <div class="overlay-text">Visit Site</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0">
+        <a href="https://tahjones.github.io/milestone-project-1/" target="_blank">
+          <div class="overlay-container-4">
+            <img class="portfolio-img" src="assets/img/mousecodedesign.png" alt="website 4 - mousecodedesign.com">
+            <div class="overlay">
+              <div class="overlay-text">Visit Site</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="row row-portfolio">
+      <div class="col col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1">
+        <a href="https://tahjones.github.io/mini-project-2/" target="_blank">
+          <div class="overlay-container-5">
+            <img class="portfolio-img" src="assets/img/qcmetricsanalyser.png" alt="website 5 - qcmetricsanalyser.com">
+            <div class="overlay">
+              <div class="overlay-text">Visit Site</div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0">
+        <a href="https://tahjones.github.io//" target="_blank">
+          <div class="overlay-container-6">
+            <img class="portfolio-img" src="https://via.placeholder.com/800x600.png?text=More+Coming+Soon" alt="website 6 - placeholder image">
+            <div class="overlay">
+              <div class="overlay-text">Visit Site</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </section>
+  <!-- PORTFOLIO-END -->
+
+  <!--QUALIFICATIONS-->
+  <section class="bg-qualifications" id="qualifications">
+    <div class="row">
+      <div class="col col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2">
+        <h3 class="page-title">Education & Qualifications</h3>
+        <hr>
+        <div class="qualifications">
+          <ul>
+            <li><span>Diploma in Software Development: </span>Codeinstitute 2018 - Ongoing</li>
+            <li><span>The Complete Web Developer Course: </span>Udemy 2015</li>
+            <li><span>Web Design Course: </span>Skillsology 2014</li>
+            <li><span>1st Class BSc Genetics: </span>Aberystwyth University 1994-97</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--QUALIFICATIONS-END-->
+
+  <!-- CURRENT-EMPLOYMENT -->
+  <section class="bg-career" id="career">
+    <div class="row">
+      <div class="col col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2">
+
+        <h3 class="page-title">Current Employment</h3>
+        <hr>
+        <div class="career">
+
+          <ul class="row career-title visible-xs">
+            <li>Technician</li>
+            <li>NHS</li>
+            <li>2014-Present</li>
+          </ul>
+
+          <ul class="row career-title hidden-xs">
+            <li>Genetic Technologist</li>
+            <li>Royal Marsden</li>
+            <li>Aug 2014 - Present</li>
+          </ul>
+
+          <p>Experienced scientific professional, working as a Genetic Technologist at The Royal Marsden Hospital. Currently working in a senior research position within a busy molecular diagnostics department. Responsible for analysing clinical trial samples using next generation sequencing (NGS) to identify cancer patients with actionable genetic mutations. Also involved in the validation of new technologies and their integration into regular clinical diagnostic testing.</p>
+
+          <h4>Achievements</h4>
+          <ul class="career-list achievements-list">
+            <li>Validation of new NGS panel to replace current single gene based tests in diagnostic laboratory to streamline workflow and increase sample testing capacity within the department</li>
+            <li>Optimisation of NGS lab protocol; validation of enzymatic DNA fragmentation, fluorometric based DNA quantification and low DNA input protocol to improve efficency, scope and robustness of test</li>
+            <li>Organisation of NGS testing for FORMAT trial (Feasibility of a Molecular Characterisation Approach to Treatment), a feasibilty study of NGS technology as a clinical diagnostic tool</li>
+            <li>Improving excel datasheets - using programming skills to automate data entry tasks</li>
+          </ul>
+
+          <h4>Responsibilities</h4>
+          <ul class="career-list responsiblities-list">
+            <li>Testing clinical trial samples using NGS DNA sequencing</li>
+            <li>Analysing NGS sequencing data</li>
+            <li>Writing and updating technical documentation</li>
+            <li>Validating new laboratory procedures</li>
+            <li>Supervising and training junior colleagues</li>
+          </ul>
+
+          <h4>Publications</h4>
+          <ul class="career-list publications-list">
+            <li>Investigating the feasibility of tumour molecular profiling in gastrointestinal malignancies in routine clinical practice - Annals of Oncology</li>
+            <li>Molecular profiling of colorectal pulmonary metastases and primary tumours: implications for targeted treatment - Oncotarget</li>
+            <li>Optimised ARID1A immunohistochemistry is an accurate predictor of ARID1A mutational status in gynaecological cancers - The Journal of Pathology</li>
+            <li>Gastrointestinal stromal tumour with multiple primary tyrosine kinase mutations, clinicopathologic and molecular characterisation - Applied Immunohistochemistry & Molecular Morphology</li>
+            <li>An Evaluation of the Challenges to Developing Tumour BRCA1 and BRCA2 Testing Methodologies for Clinical Practice - Human Mutation</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- CURRENT-EMPLOYMENT-END -->
+
+  <!--CAREER-HISTORY-->
+  <section class="bg-career-history">
+    <div class="row">
+      <div class="col col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2">
+        <h3 class="page-title">Career History</h3>
+        <hr>
+
+        <div class="career">
+
+          <ul class="row career-title visible-xs">
+            <li>Technican</li>
+            <li>NHS</li>
+            <li>2011-14</li>
+          </ul>
+
+          <ul class="row career-title hidden-xs">
+            <li>Medical Technican</li>
+            <li>Royal Marsden</li>
+            <li>Sep 2011 – Aug 2014</li>
+          </ul>
+
+          <p>Employed as a Medical Technical Officer in the Molecular Diagnostics department. Performed high throughput screening of blood and tissue samples using PCR, DNA sequencing and Next Generation Sequencing (NGS) to detect acquired genetic abnormalities in tumour samples. </p>
+
+          <h4>Achievements</h4>
+          <ul class="career-list achievements-list">
+            <li>Completion of CRUKs phase 1 stratified medicine programme</li>
+            <li>Introduction of NGS technology for CRUKs phase 2 stratified medicine programme</li>
+          </ul>
+
+          <h4>Responsibilities</h4>
+          <ul class="career-list responsiblities-list">
+            <li>Manual & automated DNA extraction</li>
+            <li>Testing solid tumour samples by PCR, DNA sequencing & NGS</li>
+            <li>Booking in & updating patient records</li>
+            <li>Writing and updating technical documentation</li>
+            <li>Supervising and training colleagues</li>
+          </ul>
+        </div>
+
+        <div class="career">
+
+          <ul class="row career-title visible-xs">
+            <li>Technican</li>
+            <li>NHS</li>
+            <li>2010-11</li>
+          </ul>
+
+          <ul class="row career-title hidden-xs">
+            <li>Medical Technican</li>
+            <li>Welsh Blood Service</li>
+            <li>Feb 2010 – Sep 2011</li>
+          </ul>
+
+          <p>Worked as a laboratory technican in the Molecular Genetics department testing samples from blood donors wanting to join the Welsh Bone Marrow Donor Registry. Extracted DNA from samples and performed high throughput testing by multiplex PCR and DNA sequencing.</p>
+
+          <h4>Achievements</h4>
+          <ul class="career-list achievements-list">
+            <li>Introduction and optimisation of DNA sequencing within department</li>
+            <li>Learning to analyse HLA typing data to determine histocompatibility</li>
+          </ul>
+
+          <h4>Responsibilities</h4>
+          <ul class="career-list responsiblities-list">
+            <li>Manual & automated DNA extraction</li>
+            <li>Testing samples by multiplex PCR & DNA sequencing</li>
+            <li>Booking in & updating patient records</li>
+            <li>Visualisation of HLA type by agarose gel electrophoresis</li>
+            <li>HLA type analysis to determine compatibility for transplantation</li>
+            <li>Supervising and training colleagues</li>
+          </ul>
+        </div>
+
+        <div class="career">
+
+          <ul class="row career-title visible-xs homeopath">
+            <li>Homeopath</li>
+            <li>Self Employed</li>
+            <li>2007–09</li>
+          </ul>
+
+          <ul class="row career-title hidden-xs">
+            <li>Homeopath</li>
+            <li>Self Employed</li>
+            <li>June 2007 – Dec 2009</li>
+          </ul>
+
+          <p>Self-employed homeopath based at several clinics based in Hertfordshire and London. Successfully treated clients with a range of emotional and chronic physical conditions including; anxiety, depression, stress, hormonal problems, auto-immune disorders, ME and skin conditions.</p>
+
+          <h4>Achievements</h4>
+          <ul class="career-list achievements-list">
+            <li>Successfully treated clients with a range of emotional and physical conditions</li>
+            <li>Developed self-discipline and resilience working as a sole trader during recession</li>
+          </ul>
+
+          <h4>Responsiblities</h4>
+          <ul class="career-list responsiblities-list">
+            <li> Managing business finances & marketing strategies</li>
+            <li> Designing advertising material</li>
+            <li> Presenting small talks to local clubs and interest groups</li>
+            <li> Networking with local business owners and healthcare practitioners</li>
+          </ul>
+        </div>
+
+        <div class="career">
+          <ul class="row career-title visible-xs">
+            <li>Technical</li>
+            <li>Illumina</li>
+            <li>2003–08</li>
+          </ul>
+
+          <ul class="row career-title hidden-xs">
+            <li>Research Technical</li>
+            <li>Illumina/Solexa</li>
+            <li>Nov 2003 – Aug 2008</li>
+          </ul>
+
+          <p>A senior member of the flow cell manufacturing department involved in the development and scale up of the flow cell manufacturing process. Played a key role in building the department from a single person (myself) to a small department that supplied the company and its customers around the world with flow cells for large scale DNA sequencing.</p>
+
+          <h4>Achievements</h4>
+          <ul class="career-list achievements-list">
+            <li>Responsible for process development and scale up of flow cell manufacture</li>
+            <li>Part of start up company that developed next generation sequencing technology</li>
+          </ul>
+
+          <h4>Responsiblities</h4>
+          <ul class="career-list responsiblities-list">
+            <li>Process development & expansion of manufacturing process</li>
+            <li>Purchase & maintenance of laboratory equipment</li>
+            <li>Presenting data at laboratory meetings</li>
+            <li>Supervising and training colleagues</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!--CAREER-HISTORY-END-->
+
+  <!--FORM-->
+  <section id="contact">
+    <div class="row">
+      <div class="col col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2">
+        <h3 class="page-title page-title--contact">Contact</h3>
+        <hr>
+        <h4 class="page-subtitle--contact-small">Send a message:</h4>
+        <h4 class="page-subtitle--contact">To send a message please use the form below:</h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-8 col-lg-offset-2">
+
+        <form id="contactForm">
+          <div class="form-container">
+
+            <div class="form">
+              <label for="name">Name</label>
+              <input type="text" class="form-input" name="name" id="name" placeholder="Your Name" required="">
+            </div>
+
+            <div class="form">
+              <label for="email">Email</label>
+              <input type="email" class="form-input" name="email" id="email" placeholder="Your Email Address" required="">
+            </div>
+
+            <div class="form">
+              <label for="msg">Message</label>
+              <textarea class="form-input" name="msg" id="msg" placeholder="Your Message" required=""></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-submit">Submit</button> <!--<button type="reset" class="btn btn-reset">Reset</button>-->
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+  <!--FORM-END-->
+
+  <!-- GOOGLE-MAPS-->
+  <!--<section>
+    <div id="map"></div>
+  </section>-->
+  <!--GOOGLE-MAPS-END-->
+  
+  <!-- GITHUB -->
+  <!--<section>
+    <div class="github-form">
+      <input type="text" id="githubUserName" value="octocat" oninput="fetchGithubInfo()" />
+      <div id="githubUserData"></div>
+      <div id="githubRepoData"></div>
+    </div>
+  </section>-->
+  <!-- GITHUB-END -->
+
+  <!--FOOTER-->
+  <footer>
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1">
+        <div id="copyRight"></div>
+        </div>  
+    </div>
+  </footer>
+  <!--FOOTER-END-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+  <!--<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>-->
+  <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzU4CSGzpSUtlImQMP7RUOPFEfuaBORPQ&callback=initMap"></script>-->
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/github.js"></script>
+  <script src="assets/js/sendEmail.js"></script>
+  <!--<script src="assets/js/github.js"></script>-->
+</body>
+
+</html>

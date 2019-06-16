@@ -1,7 +1,7 @@
 /* GENERAL */
 
 body {
-    background-color: #0a1926;
+    background-color: #0b6abd;
     font-family: 'Roboto', sans-serif;
     margin: 0 auto;
     padding-top: 0;
@@ -482,7 +482,7 @@ a.download-cv-icon {
 }
 
 .bg-banner-inner {
-    background-color: rgba(34, 49, 63, 0.5);
+    background-color: rgba(34, 49, 63, .4);
     padding-top: 120px;
     /*margin: 0 -30;*/
 }
@@ -510,7 +510,7 @@ a.download-cv-icon {
 }
 
 .contact-details-bg {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .4);
     height: 650px;
     margin: 120px 0 0px;
     padding: 20px 0;
@@ -1177,7 +1177,7 @@ ul.publications-list>li:before {
     left: 0;
     margin-top: 5px;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     height: 440px;
 }
 

@@ -532,7 +532,7 @@ a.download-cv-icon {
     text-shadow: 2px 2px 4px #000;
 }
 
-.contact-section {
+.contact-section>ul>li {
     text-align: left;
 }
 

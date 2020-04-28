@@ -593,8 +593,8 @@ a.download-cv-icon {
     .address>ul>li,
     .contact-details>ul>li {
         font-size: 11px;
-        text-align: center;
-        margin: 5px 0;
+        /* text-align: center; */
+        /* margin: 5px 0; */
     }
 }
 
@@ -633,7 +633,7 @@ a.download-cv-icon {
     .address>ul>li,
     .contact-details>ul>li {
         font-size: 12px;
-        text-align: center;
+        /* text-align: center; */
 
     }
 }

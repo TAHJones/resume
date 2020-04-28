@@ -532,6 +532,10 @@ a.download-cv-icon {
     text-shadow: 2px 2px 4px #000;
 }
 
+.contact-section {
+    text-align: left;
+}
+
 @media (min-width: 421px) {
     .bg-banner {
         /*color: #FFF;*/

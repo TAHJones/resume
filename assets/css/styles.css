@@ -21,7 +21,6 @@ p {
     color: #818786;
     font-size: 14px;
     line-height: 25px;
-    /*font-family: 'Chakra', sans-serif;*/
     text-align: justify;
 }
 
@@ -62,38 +61,23 @@ hr {
     display: none;
     font-size: 13px;
     margin: 10px 0 20px;
-    /*text-align: left;*/
 }
 
 .page-subtitle--contact-small {
     color: #ffcd37;
-    /*display: inline; */
     font-size: 18px;
     margin-bottom: 20px;
     text-align: center;
 }
 
-/*@media (min-width:370px) {
-    .page-subtitle--contact {
-         color: #ffcd37; 
-        font-size: 14px;
-        margin: 10px 0 20px;
-         text-align: center; 
-    }
-}*/
-
 @media (min-width:421px) {
     .page-subtitle--contact-small {
-        /*color: #ffcd37; */
         font-size: 20px;
-        /*margin: 10px 0 20px;*/
-        /*text-align: center; */
     }
 }
 
 @media (min-width:600px) {
     .page-subtitle--contact {
-        /* color: #ffcd37; */
         display: block;
         font-size: 20px;
         margin: 10px 0 40px;
@@ -101,11 +85,7 @@ hr {
     }
 
     .page-subtitle--contact-small {
-        /*color: #ffcd37;*/
         display: none;
-        /*font-size: 14px;*/
-        /*margin: 10px 0 20px;*/
-        /*text-align: center;*/
     }
 }
 
@@ -176,37 +156,18 @@ hr {
 
 /*style tooltip text and hide when not hovered over*/
 
-/*.tooltip .tooltiptext {
-	background-color: #222;
-	color: #FF9404;
-	font-size: 16px;
-	text-align: center;
-	border-radius: 6px;
-	padding: 10px 5px;
-	visibility: hidden;
-	width: 120px;
-	z-index: 10;
-	
-	position the tooltip
-	position: absolute;
-	top: 1px;
-}*/
-
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 90px;
     background-color: #e2e9b3;
     color: #222;
     text-align: center;
-    /* border-radius: 2px; */
     padding: 12px 4px 10px;
     position: absolute;
     z-index: 1;
     font-size: 12px;
     top: 75px;
-    /* overflow: visible; */
     left: -30px;
-    /* border: 10px solid #222; */
     border-radius: 4px;
     transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
@@ -309,7 +270,6 @@ a.download-cv-icon {
         top: 0;
         left: 0;
         background-color: #18181b;
-        /*overflow: hidden;*/
         width: 100%;
         height: 60px;
     }
@@ -368,12 +328,7 @@ a.download-cv-icon {
     }
 
     .dropdownLink {
-        /*float: left;*/
-        /*display: block;*/
-        /*text-align: center;*/
         padding: 23px;
-        /*text-decoration: none;*/
-        /*font-size: 14px;*/
     }
 }
 
@@ -472,7 +427,6 @@ a.download-cv-icon {
 .bg-banner {
     color: #FFF;
     background-color: rgb(34, 49, 63);
-    /*background-image: url(/resume/assets/img/bg.jpg);*/
     background-image: url(../img/banner-image.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -484,7 +438,6 @@ a.download-cv-icon {
 .bg-banner-inner {
     background-color: rgba(34, 49, 63, .4);
     padding-top: 120px;
-    /*margin: 0 -30;*/
 }
 
 .banner-title {
@@ -538,50 +491,24 @@ a.download-cv-icon {
 
 @media (min-width: 421px) {
     .bg-banner {
-        /*color: #FFF;*/
-        /*background-color: rgb(34, 49, 63);*/
-        /* background-image: url(/resume/assets/img/bg.jpg); */
-        /*background-image: url(../img/banner-image.jpg);*/
-        /*background-repeat: no-repeat;*/
-        /*background-position: center;*/
-        /*background-size: cover;*/
-        /*background-attachment: fixed;*/
         height: 1220px;
     }
 
     .bg-banner-inner {
-        /*background-color: rgba(34, 49, 63, 0.5);*/
         padding-top: 140px;
-        /* margin: 0 -30; */
     }
 
     .banner-title {
-        /*color: #FF9404;*/
-        /*position: relative;*/
-        /*top: 0px;*/
-        /*font-family: 'Cabin', sans-serif;*/
         font-size: 40px;
-        /*text-shadow: 4px 4px 8px #000;*/
-        /*max-width: 700px;*/
-        /*margin: 0 auto 10px;*/
-        /*text-align: center;*/
-        /*text-transform: uppercase;*/
     }
 
     .banner-subtitle {
-        /*color: #ffcd37;*/
-        /*font-family: 'Chakra Petch', sans-serif;*/
         font-size: 30px;
-        /*text-shadow: 4px 4px 8px #000;*/
-        /*margin: 30px 0 50px;*/
-        /*text-align: center;*/
     }
 
     .contact-details-bg {
-        /*background-color: rgba(0, 0, 0, .5);*/
         height: 800px;
         margin: 140px 0 0px;
-        /*padding: 20px 0;*/
     }
 
     .address>h4,
@@ -593,35 +520,21 @@ a.download-cv-icon {
     .address>ul>li,
     .contact-details>ul>li {
         font-size: 11px;
-        /* text-align: center; */
-        /* margin: 5px 0; */
     }
 }
 
 @media (min-width: 450px) {
     .bg-banner {
-        /*color: #FFF;*/
-        /*background-color: rgb(34, 49, 63);*/
-        /* background-image: url(/resume/assets/img/bg.jpg); */
-        /*background-image: url(../img/banner-image.jpg);*/
-        /*background-repeat: no-repeat;*/
-        /*background-position: center;*/
-        /*background-size: cover;*/
-        /*background-attachment: fixed;*/
         height: 1400px;
     }
 
     .bg-banner-inner {
-        /*background-color: rgba(34, 49, 63, 0.5);*/
         padding-top: 160px;
-        /* margin: 0 -30; */
     }
 
     .contact-details-bg {
-        /*background-color: rgba(0, 0, 0, .5);*/
         height: 950px;
         margin: 160px 0 0px;
-        /*padding: 20px 0;*/
     }
 
     .address>h4,
@@ -633,8 +546,6 @@ a.download-cv-icon {
     .address>ul>li,
     .contact-details>ul>li {
         font-size: 12px;
-        /* text-align: center; */
-
     }
 }
 
@@ -657,28 +568,16 @@ a.download-cv-icon {
 
 @media (min-width:768px) {
     .bg-banner {
-        /*color: #FFF;*/
-        /*background-color: rgb(34, 49, 63);*/
-        /* background-image: url(/resume/assets/img/bg.jpg); */
-        /*background-image: url(../img/banner-image.jpg);*/
-        /*background-repeat: no-repeat;*/
-        /*background-position: center;*/
-        /*background-size: cover;*/
-        /*background-attachment: fixed;*/
         height: 1450px;
     }
 
     .bg-banner-inner {
-        /*background-color: rgba(34, 49, 63, 0.5);*/
         padding-top: 180px;
-        /* margin: 0 -30; */
     }
 
     .contact-details-bg {
-        /*background-color: rgba(0, 0, 0, .5);*/
         height: 950px;
         margin: 180px 0 0px;
-        /*padding: 20px 0;*/
     }
 
 
@@ -731,82 +630,17 @@ a.download-cv-icon {
 
     .address>h4,
     .contact-details>h4 {
-        /*margin-left: 20px;*/
         font-size: 26px;
-        /*text-align: left;*/
     }
 
     .address>ul>li,
     .contact-details>ul>li {
         font-size: 18px;
-        /*margin: 10px 0;*/
         text-align: left;
     }
 }
 
 /* BANNER-END */
-
-/*DOWNLOAD-CV*/
-
-/*.download-cv-bg {
-    position: relative;
-    top: -172px;
-    left: 0;
-}*/
-
-/*.download-cv {
-	background-color: rgba(0, 0, 0, .6);
-	color: #ff9f1e;
-	font-size: 22px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,50%);
-	padding: 6px 40px 20px 34px;
-	 border: #222 solid 3px; 
-	border-radius: 10px;
-	transition: all .25s ease-in-out;
-	-webkit-transition: all .25s ease-in-out;
-	-moz-transition: all .25s ease-in-out;
-}*/
-
-/*.download-cv:hover {
-    color: #FF4C04;
-    background-color: rgba(0, 0, 0, .8);
-    border: 2px solid #222;
-}*/
-
-/*.download-cv::before {
-	content: "\f019";
-	font-family: FontAwesome;
-	color: #405A74;
-	font-size: 42px;
-	position: relative;
-	top: 8px;
-	left: 5px;
-	margin-right: 24px;
-}*/
-
-/*DOWNLOAD-CV-END*/
-
-/* PROFESSIONAL-PROFILE */
-
-/*.profile-img {
-    border-radius: 6px;
-    display: block;
-    margin: 0 auto;
-    width: 90%;
-}*/
-
-/*@media (min-width: 768px) {
- 
-}*/
-
-/*@media (min-width:992px) {
-    
-}*/
-
-/* PROFESSIONAL-PROFILE-END */
 
 /* TECHNICAL-SKILLS */
 
@@ -876,12 +710,6 @@ a.download-cv-icon {
     line-height: 20px;
 }
 
-/*.developer-tools li,
-.online-marketing li,
-.qualifications li {
-    text-align: center;
-}*/
-
 .developer-tools li>span,
 .online-marketing li>span,
 .qualifications li>span,
@@ -901,8 +729,6 @@ a.download-cv-icon {
 
 @media (min-width: 768px) {
 
-    /*.developer-tools li,*/
-    /*.online-marketing li,*/
     .qualifications li {
         text-align: center;
     }
@@ -1166,7 +992,6 @@ ul.publications-list>li:before {
 /*make map visible and center on page*/
 
 #map {
-    /*overflow: hidden !important;*/
     height: 400px;
     width: 80%;
     left: 10%;
@@ -1195,12 +1020,6 @@ ul.publications-list>li:before {
 }
 
 #githubUserName {
-    /*position: relative;*/
-    /*left: 50px;*/
-    /*top: 50%;*/
-    /*transform: translateY(-50%);*/
-    /*vertical-align: middle;*/
-    /*display: inline-block;*/
     margin-bottom: 10px;
     width: 88%;
 }
@@ -1224,10 +1043,6 @@ ul.publications-list>li:before {
 
 #githubUserImg {
     display: none;
-    /*position: absolute;*/
-    /*top: 50%;*/
-    /*left: 50%;*/
-    /*transform: translate(-113%, -50%);*/
 }
 
 .github-avatar {
@@ -1236,10 +1051,6 @@ ul.publications-list>li:before {
     border: 4px solid #405a74;
     border-radius: 12px;
 }
-
-/*#githubUserData > h2 {
-	color: #99b4b0;
-}*/
 
 #githubUserData>h2 {
     color: #99b4b0;
@@ -1275,17 +1086,6 @@ ul.publications-list>li:before {
     font-style: italic;
 }
 
-/*.avi {
-  float: left;
-  margin-right: 7px;
-  margin-bottom: 7px;
-}*/
-
-/*.avi img {
-  border: 1px solid #ccc;
-  padding: 3px;
-}*/
-
 .repo-list {
     position: absolute;
     margin: 0 auto;
@@ -1297,7 +1097,6 @@ ul.publications-list>li:before {
 
 .repo-list>p {
     font-size: 12px;
-    /*font-weight: bold;*/
     margin-left: 10px;
     display: inline-block;
     margin-bottom: 8px;
@@ -1326,12 +1125,6 @@ ul.publications-list>li:before {
     border-radius: 2px;
     color: #ff9f1e;
     background-color: #202020;
-    /* background-image: -webkit-gradient(linear, left top, left bottom, from(#5597d8), to(#3673af)); */
-    /* background-image: -webkit-linear-gradient(top, #5597d8, #3673af); */
-    /* background-image: -moz-linear-gradient(top, #5597d8, #3673af); */
-    /* background-image: -ms-linear-gradient(top, #5597d8, #3673af); */
-    /* background-image: -o-linear-gradient(top, #5597d8, #3673af); */
-    /* background-image: linear-gradient(top, #5597d8, #3673af); */
     transition: all .25s ease-in-out;
     -webkit-transition: all .25s ease-in-out;
     -moz-transition: all .25s ease-in-out;
@@ -1342,12 +1135,6 @@ ul.publications-list>li:before {
     color: #FF4C04;
     background-color: #000;
     border: 2px solid #405A74;
-    /*background-image: -webkit-gradient(linear, left top, left bottom, from(#4b87c2), to(#396895));*/
-    /*background-image: -webkit-linear-gradient(top, #4b87c2, #396895);*/
-    /*background-image: -moz-linear-gradient(top, #4b87c2, #396895);*/
-    /*background-image: -ms-linear-gradient(top, #4b87c2, #396895);*/
-    /*background-image: -o-linear-gradient(top, #4b87c2, #396895);*/
-    /*background-image: linear-gradient(top, #4b87c2, #396895);*/
 }
 
 .repo-list ul li a:active {
@@ -1361,34 +1148,15 @@ ul.publications-list>li:before {
     font-size: 0.9em;
 }
 
-/*@media (min-width:351px) {
-    .repo-list > p {
-    	font-size: 12px;
-    	font-weight: bold;
-    	margin-left: 10px;
-    	display: inline-block;
-    	margin-bottom: 8px;
-    }
-}*/
-
 @media (min-width:421px) {
     .github-form {
-        /*position: relative;*/
-        /*top: 30px;*/
-        /*left: 0;*/
-        /*margin-top: 5px;*/
-        /*width: 100%;*/
-        /*background-color: rgba(0, 0, 0, 0.5);*/
         height: 420px;
     }
 
     #githubRepoData {
-        /*position: relative;*/
         top: 220px;
-        /*width: 100%;*/
         height: 200px;
         background-color: #000;
-        /*overflow: hidden;*/
     }
 }
 
@@ -1396,12 +1164,6 @@ ul.publications-list>li:before {
 
 @media (min-width:450px) {
     .github-form {
-        /*position: relative;*/
-        /*top: 30px;*/
-        /*left: 0;*/
-        /*margin-top: 5px;*/
-        /*width: 100%;*/
-        /*background-color: rgba(0, 0, 0, 0.5);*/
         height: 350px;
     }
 
@@ -1414,9 +1176,6 @@ ul.publications-list>li:before {
     }
 
     .github-info {
-        /*position: absolute;*/
-        /*top: 50%;*/
-        /*left: 50%;*/
         transform: translate(5%, -45%);
     }
 
@@ -1428,19 +1187,11 @@ ul.publications-list>li:before {
     }
 
     .github-info>label {
-        /*display: block;*/
-        /*max-width: 100%;*/
-        /*margin-bottom: 10px;*/
-        /*font-weight: 700;*/
-        /*color: #405a74;*/
         font-size: 14px;
-        /*font-style: italic;*/
     }
 
     #githubUserData>h2 {
-        /*color: #99b4b0;*/
         font-size: 18px;
-        /*padding: 10px 5px;*/
     }
 
     .repo-list>p {
@@ -1452,29 +1203,15 @@ ul.publications-list>li:before {
     }
 
     #githubRepoData {
-        /*position: relative;*/
         top: 200px;
-        /*width: 100%;*/
         height: 240px;
-        /*background-color: #000;*/
-        /*overflow: hidden;*/
     }
 
     .repo-list ul li a {
-        /*font-weight: bold;*/
         font-size: 12px;
         padding: 4px 6px;
-        /*display: block;*/
-        /*float: left;*/
         margin-left: 12px;
         margin-bottom: 10px;
-        /*text-decoration: none;*/
-        /*border: 2px solid #202020;*/
-        /*-webkit-border-radius: 2px;*/
-        /*-moz-border-radius: 2px;*/
-        /*border-radius: 2px;*/
-        /*color: #ff9f1e;*/
-        /*background-color: #202020;*/
     }
 
 }
@@ -1483,115 +1220,58 @@ ul.publications-list>li:before {
 
 @media (min-width:570px) {
     #githubRepoData {
-        /* position: relative; */
-        /*top: 200px;*/
-        /* width: 100%; */
         height: 210px;
-        /* background-color: #000; */
-        /* overflow: hidden; */
     }
 }
 
 /*styles for screens 768px and above*/
 
 @media (min-width:768px) {
-    .github-form {
-        /*position: relative;*/
-        /*top: 25px;*/
-        /*left: 0;*/
-        /*margin-top: 40px;*/
-        /*width: 100%;*/
-        /*background-color: rgba(0, 0, 0, 0.5);*/
-        /*height: 330px;*/
-    }
     .github-form>h4 {
-        /*display: block;*/
         font-size: 22px;
-        /*text-align: center;*/
         padding: 40px 0;
     }
 
     #githubRepoData {
-        /*position: relative;*/
         top: 248px;
-        /*width: 100%;*/
         height: 220px;
-        /*background-color: #000;*/
-        /*overflow: hidden;*/
     }
 
     #githubUserImg {
-        /*display: block;*/
-        /*position: absolute;*/
-        /*top: 50%;*/
-        /*left: 50%;*/
         transform: translate(-120%, -34%);
     }
     .github-avatar {
         width: 180px;
         height: 180px;
-        /*border: 4px solid #405a74;*/
-        /*border-radius: 12px;*/
     }
 
     .github-info {
-        /*position: absolute;*/
-        /*top: 50%;*/
-        /*left: 50%;*/
         transform: translate(12%, -34%);
     }
 
     .github-info>label {
-        /* display: block; */
-        /* max-width: 100%; */
-        /* margin-bottom: 10px; */
-        /* font-weight: 700; */
-        /* color: #405a74; */
         font-size: 18px;
-        /* font-style: italic; */
     }
 
     #githubUserData>h2 {
-        /* color: #99b4b0; */
         font-size: 20px;
-        /* padding: 10px 5px; */
     }
 
     .small-name {
         font-size: 18px;
-        /*color: #a9a9a9;*/
-        /*font-style: italic;*/
     }
 
     .gh-content>p {
-        /*color: #99b4b0;*/
-        /*font-style: italic;*/
         font-size: 16px;
     }
 
     .repo-list>p {
         font-size: 15px;
-        /*font-weight: bold;*/
-        /*margin-left: 12px;*/
-        /*display: inline-block;*/
-        /*margin-bottom: 12px;*/
     }
 
     .repo-list ul li a {
-        /*font-weight: bold;*/
         font-size: 13px;
         padding: 6px 8px;
-        /*display: block;*/
-        /*float: left;*/
-        /*margin-left: 12px;*/
-        /*margin-bottom: 10px;*/
-        /*text-decoration: none;*/
-        /*border: 2px solid #202020;*/
-        /*-webkit-border-radius: 2px;*/
-        /*-moz-border-radius: 2px;*/
-        /*border-radius: 2px;*/
-        /*color: #ff9f1e;*/
-        /*background-color: #202020;*/
     }
 }
 
@@ -1599,20 +1279,11 @@ ul.publications-list>li:before {
 
 @media (min-width:992px) {
     .github-form {
-        /*position: relative;*/
-        /*top: 25px;*/
-        /*left: 0;*/
-        /*margin-top: 40px;*/
-        /*width: 100%;*/
-        /*background-color: rgba(0, 0, 0, 0.5);*/
         height: 360px;
     }
 
     .github-form>h4 {
-        /*display: block;*/
         font-size: 26px;
-        /*text-align: center;*/
-        /*padding: 30px 0 50px;*/
     }
 
     #githubLink {
@@ -1620,49 +1291,25 @@ ul.publications-list>li:before {
     }
 
     #githubUserImg {
-        /* display: block; */
-        /* position: absolute; */
-        /* top: 50%; */
-        /* left: 50%; */
         transform: translate(-120%, -42%);
     }
 
     .github-info {
-        /*position: absolute;*/
-        /*top: 50%;*/
-        /*left: 50%;*/
         transform: translate(12%, -42%);
     }
 
     #githubUserData>h2 {
-        /* color: #99b4b0; */
         font-size: 22px;
-        /* padding: 10px 5px; */
     }
 
     .repo-list>p {
         font-size: 16px;
-        /*font-weight: bold;*/
-        /*margin-left: 12px;*/
-        /*display: inline-block;*/
         margin-bottom: 12px;
     }
 
     .repo-list ul li a {
-        /*font-weight: bold;*/
         font-size: 14px;
         padding: 8px 10px;
-        /*display: block;*/
-        /*float: left;*/
-        /*margin-left: 12px;*/
-        /*margin-bottom: 10px;*/
-        /*text-decoration: none;*/
-        /*border: 2px solid #202020;*/
-        /*-webkit-border-radius: 2px;*/
-        /*-moz-border-radius: 2px;*/
-        /*border-radius: 2px;*/
-        /*color: #ff9f1e;*/
-        /*background-color: #202020;*/
     }
 }
 
@@ -1791,17 +1438,13 @@ footer {
 
 @media (min-width:351px) {
     #copyRight {
-        /*color: #818786;*/
         font-size: 12px;
-        /*text-align: center;*/
     }
 }
 
 @media (min-width:421px) {
     #copyRight {
-        /*color: #818786;*/
         font-size: 14px;
-        /*text-align: center;*/
     }
 }
 

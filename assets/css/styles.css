@@ -807,7 +807,7 @@ a.download-cv-icon {
 
 .overlay-text {
     color: #FF9404;
-    font-size: 25px;
+    font-size: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -829,7 +829,13 @@ a.download-cv-icon {
 
 @media (min-width: 410px) {
     .overlay-text {
-        font-size: 30px;
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 500px) {
+    .overlay-text {
+        font-size: 24px;
     }
 }
 
@@ -837,10 +843,6 @@ a.download-cv-icon {
     .portfolio-img {
         width: 100%;
         height: 100%;
-    }
-
-    .overlay-text {
-        font-size: 28px;
     }
 }
 
@@ -851,7 +853,7 @@ a.download-cv-icon {
     }
 
     .overlay-text {
-        font-size: 30px;
+        font-size: 28px;
     }
 }
 
@@ -879,6 +881,10 @@ ul.career-title>li {
     padding-right: 5%;
     text-align: left;
     width: 30%;
+}
+
+.bg-career-history {
+    margin-top: 40px;
 }
 
 /*fix for career-list heading below 410px width*/

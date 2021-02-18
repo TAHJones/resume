@@ -2,6 +2,11 @@
 
 body {
     background-color: #04335b;
+    background-image: url(../img/banner-image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
     margin: 0 auto;
     padding-top: 0;
@@ -9,8 +14,14 @@ body {
 }
 
 section {
+    /* background-color: rgba(34, 49, 63, .4); */
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 60px 0 60px;
+}
+
+.dark {
     background-color: #000;
-    padding: 50px 0 0;
+    padding: 80px 0 80px;
 }
 
 section:last-of-type {
@@ -42,7 +53,7 @@ a:hover {
 
 hr {
     width: 50px;
-    border: solid 2px #405a74;
+    border: solid 2px #5782ae;
     padding: 0;
     margin-top: 30px;
     margin-bottom: 40px;
@@ -51,7 +62,7 @@ hr {
 .page-title {
     margin-top: 0;
     color: #FF9404;
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 15px;
     text-align: center;
 }
@@ -98,7 +109,7 @@ hr {
 
     .page-title {
         margin-top: 0;
-        font-size: 24px;
+        font-size: 28px;
         margin-bottom: 15px;
     }
 
@@ -115,7 +126,7 @@ hr {
         font-size: 18px;
     }
     .page-title {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .page-subtitle-contact {
@@ -426,13 +437,6 @@ a.download-cv-icon {
 
 .bg-banner {
     color: #FFF;
-    background-color: rgb(34, 49, 63);
-    background-image: url(../img/banner-image.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 1000px;
 }
 
 .bg-banner-inner {
@@ -648,11 +652,13 @@ a.download-cv-icon {
     margin: 0 0 20px;
 }
 
-.technical-skills>h5 {
-    color: #587da2;
-    font-size: 14px;
-    margin: 10px 0 25px;
-    text-align: center;
+.technical-skills > h5 {
+	color: #ddd;
+	font-size: 14px;
+	font-weight: 900;
+	margin: 10px 0 25px;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 .technical-skills img {
@@ -686,7 +692,7 @@ a.download-cv-icon {
 
 @media (min-width:992px) {
     .technical-skills>h5 {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .technical-skills img {

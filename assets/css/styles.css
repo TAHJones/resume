@@ -212,7 +212,6 @@ hr {
 
 .dropdownMobile {
     position: relative;
-    z-index: 1;
 }
 
 /*The "mobileMenu" class replaces "dropDownMenu" with JavaScript when the user clicks on the hamburger icon. This class makes the dropdown navbar look good on small screens, display the links vertically instead of horizontally*/
